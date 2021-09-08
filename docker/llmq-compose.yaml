@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  dash1:
+    container_name: dash1
+    hostname: dash1
+    restart: unless-stopped
+    image: github.com/alexdcox/dash
+    environment:
+      BLOCK_TIME: 5
+    entrypoint: "/scripts/entrypoint-regtest-genesis.sh"
+    networks:
+      dash:
+        ipv4_address: 172.32.60.1
+
+  dash2:
+    container_name: dash2
+    hostname: dash2
+    restart: unless-stopped
+    image: github.com/alexdcox/dash
+    entrypoint: "/scripts/entrypoint-regtest-masternode.sh"
+    networks:
+      dash:
+        ipv4_address: 172.32.60.2
+
+  dash3:
+    container_name: dash3
+    hostname: dash3
+    restart: unless-stopped
+    image: github.com/alexdcox/dash
+    entrypoint: "/scripts/entrypoint-regtest-masternode.sh"
+    networks:
+      dash:
+        ipv4_address: 172.32.60.3
+
+  dash4:
+    container_name: dash4
+    hostname: dash4
+    restart: unless-stopped
+    image: github.com/alexdcox/dash
+    entrypoint: "/scripts/entrypoint-regtest-masternode.sh"
+    networks:
+      dash:
+        ipv4_address: 172.32.60.4
+
+networks:
+  dash:
+    driver_opts:
+      com.docker.network.driver.mtu: 1500
+      com.docker.network.bridge.enable_icc: "true"
+      com.docker.network.bridge.enable_ip_masquerade: "true"
+      com.docker.network.bridge.host_binding_ipv4: "0.0.0.0"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.32.10.0/16
