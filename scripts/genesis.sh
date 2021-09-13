@@ -113,6 +113,11 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
   vaultPubkeys=""
   echo "Listening on port 5060 for startup requests, will continue when $NODES node(s) are ready..."
   while true; do
+    if [[ $nodesReady -eq $NODES ]]; then
+      echo "All nodes ready, starting genesis..."
+      break
+    fi
+
     message=$(socat - TCP-LISTEN:5060,crlf,reuseaddr)
     #    echo "Got message: '$message'"
     action=$(echo $message | awk '{print $1}')
@@ -153,11 +158,6 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
       ;;
 
     esac
-
-    if [[ $nodesReady -eq $NODES ]]; then
-      echo "All nodes ready, starting genesis..."
-      break
-    fi
   done
 
   #init_chain "$(echo "$ADDRS" | sed -e 's/^,*//')"
@@ -199,11 +199,11 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
   # vaultPubkey=$nodePubkey
   # add_vault $vaultPubkey "$vaultPubkeys"
 
-  vaultPubkey=$(echo "$VAULT_SIGNER_PASSWD" | thornode keys show vault -p --keyring-backend file)
-  vaultPubkeys="$vaultPubkeys;$nodePubkey"
-  vaultPubkeys=$(echo $vaultPubkeys | sed -e 's/^;//')
-  echo "Adding vault '$vaultPubkey' with keys '$vaultPubkeys'..."
-  add_vault $vaultPubkey $vaultPubkeys
+#  vaultPubkey=$(echo "$VAULT_SIGNER_PASSWD" | thornode keys show vault -p --keyring-backend file)
+#  vaultPubkeys="$vaultPubkeys;$nodePubkey"
+#  vaultPubkeys=$(echo $vaultPubkeys | sed -e 's/^;//')
+#  echo "Adding vault '$vaultPubkey' with keys '$vaultPubkeys'..."
+#  add_vault $vaultPubkey $vaultPubkeys
 
   block_time "$THOR_BLOCK_TIME"
   disable_bank_send

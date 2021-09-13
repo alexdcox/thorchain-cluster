@@ -10,12 +10,12 @@ services:
       - 1317:1317
       - 26657:26657
     environment:
-      NODES: 1
+      NODES: 0
       SEED: thornode1
       SEEDS: thornode1,thornode2
       PEER: thornode2
       NET: mocknet
-      SIGNER_NAME: thornode1
+      SIGNER_NAME: thorchain
       SIGNER_PASSWD: password
       SIGNER_SEED_PHRASE: animal possible inch item nut daughter shoot gain lonely garlic pledge frown snow alter hurdle future beach love must walk north umbrella skin enough
       ETH_HOST: http://ethereum1:8545
@@ -34,32 +34,32 @@ services:
       thornode:
         ipv4_address: 172.32.60.1
 
-  thornode2:
-    container_name: thornode2
-    hostname: thornode2
-    image: github.com/alexdcox/thornode:mocknet
-    restart: unless-stopped
-    environment:
-      PEER: thornode1
-      BINANCE: binance1:26660
-      NET: mocknet
-      SIGNER_NAME: thornode2
-      SIGNER_PASSWD: password
-      SIGNER_SEED_PHRASE: pair material jealous clip silly fly cry mule organ result topple conduct purchase marine library modify smart wood menu service such option reveal punch
-      CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
-      THORNODE_API_ENABLE: "true"
-      NATIVE: none
-      THOR_BLOCK_TIME: 5s
-    entrypoint:
-      /docker/scripts/validator.sh
-    volumes:
-      - ../scripts:/docker/scripts
-      - thornode2:/root/.thornode
-      - thornode2bond:/root/.bond
-    command: ["thornode", "start","--log_level","info","--log_format","json","--rpc.laddr", "tcp://0.0.0.0:26657"]
-    networks:
-      thornode:
-        ipv4_address: 172.32.60.2
+#  thornode2:
+#    container_name: thornode2
+#    hostname: thornode2
+#    image: github.com/alexdcox/thornode:mocknet
+#    restart: unless-stopped
+#    environment:
+#      PEER: thornode1
+#      BINANCE: binance1:26660
+#      NET: mocknet
+#      SIGNER_NAME: thornode2
+#      SIGNER_PASSWD: password
+#      SIGNER_SEED_PHRASE: pair material jealous clip silly fly cry mule organ result topple conduct purchase marine library modify smart wood menu service such option reveal punch
+#      CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
+#      THORNODE_API_ENABLE: "true"
+#      NATIVE: none
+#      THOR_BLOCK_TIME: 5s
+#    entrypoint:
+#      /docker/scripts/validator.sh
+#    volumes:
+#      - ../scripts:/docker/scripts
+#      - thornode2:/root/.thornode
+#      - thornode2bond:/root/.bond
+#    command: ["thornode", "start","--log_level","info","--log_format","json","--rpc.laddr", "tcp://0.0.0.0:26657"]
+#    networks:
+#      thornode:
+#        ipv4_address: 172.32.60.2
 
   bifrost1:
     container_name: bifrost1
@@ -71,14 +71,14 @@ services:
       NET: mocknet
       CHAIN_API: thornode1:1317
       CHAIN_RPC: thornode1:26657
-      BINANCE_HOST: http://binance1:26660
-      BTC_HOST: bitcoin1:18443
+#      BINANCE_HOST: http://binance1:26660
+#      BTC_HOST: bitcoin1:18443
       DASH_HOST: dash1:19898
       LTC_HOST: litecoin1:38443
-      ETH_HOST: http://ethereum1:8545
-      BCH_HOST: bitcoincash1:28443
-      CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
-      SIGNER_NAME: thornode1
+#      ETH_HOST: http://ethereum1:8545
+#      BCH_HOST: bitcoincash1:28443
+#      CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
+      SIGNER_NAME: thorchain
       SIGNER_PASSWD: password
       SIGNER_SEED_PHRASE: animal possible inch item nut daughter shoot gain lonely garlic pledge frown snow alter hurdle future beach love must walk north umbrella skin enough
       THOR_BLOCK_TIME: 5s
@@ -95,23 +95,23 @@ services:
       thornode:
         ipv4_address: 172.32.61.1
 
-  binance1:
-    container_name: binance1
-    hostname: binance1
-    image: registry.gitlab.com/thorchain/bepswap/mock-binance
-    networks:
-      - thornode
-
-  bitcoin1:
-    container_name: bitcoin1
-    hostname: bitcoin1
-    restart: unless-stopped
-    image: registry.gitlab.com/thorchain/devops/bitcoin-core:0.21.1
-    environment:
-      BLOCK_TIME: 5
-    entrypoint: "/scripts/entrypoint-mock.sh"
-    networks:
-      - thornode
+#  binance1:
+#    container_name: binance1
+#    hostname: binance1
+#    image: registry.gitlab.com/thorchain/bepswap/mock-binance
+#    networks:
+#      - thornode
+#
+#  bitcoin1:
+#    container_name: bitcoin1
+#    hostname: bitcoin1
+#    restart: unless-stopped
+#    image: registry.gitlab.com/thorchain/devops/bitcoin-core:0.21.1
+#    environment:
+#      BLOCK_TIME: 5
+#    entrypoint: "/scripts/entrypoint-mock.sh"
+#    networks:
+#      - thornode
 
   dash1:
     container_name: dash1
@@ -156,6 +156,16 @@ services:
     networks:
       thornode:
         ipv4_address: 172.32.62.4
+
+  litecoin1:
+    container_name: litecoin1
+    hostname: litecoin1
+    restart: unless-stopped
+    image: registry.gitlab.com/thorchain/devops/litecoin-core:0.18.1
+    environment:
+      RPC_PORT: "38443"
+      BLOCK_TIME: ${BLOCK_TIME:-1}
+    entrypoint: "/scripts/entrypoint-mock.sh"
 
 volumes:
   thornode1:
