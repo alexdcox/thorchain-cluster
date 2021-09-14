@@ -100,6 +100,7 @@ echo "BCH_START_BLOCK_HEIGHT       $BCH_START_BLOCK_HEIGHT"
 echo "DB_PATH                      $DB_PATH"
 echo "CHAIN_API                    $CHAIN_API"
 echo "CHAIN_RPC                    $CHAIN_RPC"
+echo "CHAIN_HOSTNAME               $CHAIN_HOSTNAME"
 echo "SIGNER_NAME                  $SIGNER_NAME"
 echo "SIGNER_PASSWD                $SIGNER_PASSWD"
 echo "SIGNER_SEED_PHRASE           $SIGNER_SEED_PHRASE"
@@ -161,6 +162,8 @@ if [[ -z $ETH_HOST ]]; then
   cat $config | jq 'del(.chains[] | select(.chain_id == "ETH"))' > /tmp/config.json
   mv /tmp/config.json $config
 fi
+
+sed -i "s/{{chainHostname}}/$CHAIN_HOSTNAME/" $config
 
 cat $config
 

@@ -111,6 +111,7 @@ add_vault() {
     .app_state.thorchain.vaults += [{
       "block_height": "0",
       "pub_key": "$POOL_PUBKEY",
+      "chains":["THOR", "DASH", "LTC"],
       "coins":[],
       "type": "AsgardVault",
       "status":"ActiveVault",
@@ -331,8 +332,15 @@ wait_for_block() {
 }
 
 wait_for_next_block() {
-  echo "Waiting for '$1' to reach next block..."
   current=$(get_block_height $1)
+  # BUGFIX: If the latest block endpoint is requested before the thornode is
+  #         ready it can return a block height of 'null', which may be valid
+  #         json, but it breaks the bash `-gt` operator in this case and causes
+  #         this function to hang indefinitely.
+  if [[ $current == "null" ]]; then
+    current=0
+  fi
+  echo "Waiting for '$1' to reach next block after '$current'..."
   until [[ $(get_block_height $1) -gt "$current" ]]; do
     sleep 1
   done

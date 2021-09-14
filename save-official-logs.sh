@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-logDir="$(date +%Y%m%d%H%M%S)-logs"
+logDir="./logs/official-$(date +%Y%m%d%H%M%S)"
 mkdir $logDir && cd $_
 
 containers=$(docker ps -a | tail -n +2 | awk '{print $1}')

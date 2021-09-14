@@ -1,8 +1,8 @@
 {
   "thorchain": {
     "chain_id": "thorchain",
-    "chain_host": "thornode1:1317",
-    "chain_rpc": "thornode1:26657",
+    "chain_host": "{{chainHostname}}:1317",
+    "chain_rpc": "{{chainHostname}}:26657",
     "signer_name": "thorchain"
   },
   "metrics": {
@@ -164,14 +164,14 @@
   "tss": {
     "bootstrap_peers": [],
     "rendezvous": "asgard",
-    "external_ip": "172.32.61.1",
+    "external_ip": "",
     "p2p_port": 5040,
     "info_address": ":6040"
   },
   "signer": {
     "signer_db_path": "/var/data/bifrost/signer/",
     "block_scanner": {
-      "rpc_host": "thornode1:26657",
+      "rpc_host": "{{chainHostname}}:26657",
       "start_block_height": 0,
       "enforce_block_height": false,
       "block_scan_processors": 1,

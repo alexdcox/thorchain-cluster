@@ -2,7 +2,7 @@
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
-logDir="$(date +%Y%m%d%H%M%S)-logs"
+logDir="./logs/unofficial-$(date +%Y%m%d%H%M%S)"
 mkdir $logDir
 cd $logDir
 

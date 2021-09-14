@@ -192,18 +192,18 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
     $ipAddress
 
   # create_thor_user "$SIGNER_NAME" "$SIGNER_PASSWD" "$SIGNER_SEED_PHRASE"
-  printf "%s\n%s\n%s\n" "$VAULT_MNEMONIC" "$VAULT_SIGNER_PASSWD" "$VAULT_SIGNER_PASSWD" | thornode keys add "vault" \
-    --keyring-backend file \
-    --recover
+#  printf "%s\n%s\n%s\n" "$VAULT_MNEMONIC" "$VAULT_SIGNER_PASSWD" "$VAULT_SIGNER_PASSWD" | thornode keys add thorchain \
+#    --keyring-backend file \
+#    --recover
 
   # vaultPubkey=$nodePubkey
   # add_vault $vaultPubkey "$vaultPubkeys"
 
-#  vaultPubkey=$(echo "$VAULT_SIGNER_PASSWD" | thornode keys show vault -p --keyring-backend file)
-#  vaultPubkeys="$vaultPubkeys;$nodePubkey"
-#  vaultPubkeys=$(echo $vaultPubkeys | sed -e 's/^;//')
-#  echo "Adding vault '$vaultPubkey' with keys '$vaultPubkeys'..."
-#  add_vault $vaultPubkey $vaultPubkeys
+  vaultPubkey=$(echo "$VAULT_SIGNER_PASSWD" | thornode keys show thorchain -p --keyring-backend file)
+  vaultPubkeys="$vaultPubkeys;$nodePubkey"
+  vaultPubkeys=$(echo $vaultPubkeys | sed -e 's/^;//')
+  echo "Adding vault '$vaultPubkey' with keys '$vaultPubkeys'..."
+  add_vault $vaultPubkey $vaultPubkeys
 
   block_time "$THOR_BLOCK_TIME"
   disable_bank_send
@@ -211,6 +211,10 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
   enable_internal_traffic
 
   external_address "$(determine_external_ip)" "$NET"
+
+  echo "Adding default pools"
+  cat ~/.thornode/config/genesis.json | jq ".app_state.thorchain.pools |= . + $(cat /docker/scripts/genesis-pool.json)" > /tmp/genesis.json
+  mv /tmp/genesis.json ~/.thornode/config/genesis.json
 
   echo "Genesis content"
   cat ~/.thornode/config/genesis.json

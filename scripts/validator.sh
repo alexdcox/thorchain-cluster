@@ -128,7 +128,7 @@ BINANCE=${BINANCE:=$PEER:26660}
   ipAddress=$(determine_external_ip)
 
   until nc thornode1 5060; do
-    echo "Waiting for thornnode1 setup port to open..."
+    echo "Waiting for thornode1 setup port to open..."
     sleep 1
   done
 
@@ -162,8 +162,9 @@ BINANCE=${BINANCE:=$PEER:26660}
       sleep 1
     done
 
-    wait_for_block thornode2 1
+    wait_for_next_block thornode2
 
+    echo "Sending node deposit bond transaction..."
     echo "$SIGNER_PASSWD" | thornode tx thorchain deposit 120000000 RUNE "bond:$nodeAddress" \
       --from "$SIGNER_NAME" \
       --keyring-backend=file \
