@@ -111,7 +111,7 @@ add_vault() {
     .app_state.thorchain.vaults += [{
       "block_height": "0",
       "pub_key": "$POOL_PUBKEY",
-      "chains":["THOR", "DASH", "LTC"],
+      "chains":["THOR", "DASH", "BTC"],
       "coins":[],
       "type": "AsgardVault",
       "status":"ActiveVault",

@@ -132,7 +132,7 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
       ipAddress=$(echo $message | awk '{print $7}')
 
       echo "Adding genesis account for node '$nodeAddress'"
-      thornode add-genesis-account "$nodeAddress" 1000000000000rune
+      thornode add-genesis-account "$nodeAddress" 1000000000000000000rune
 
       echo "Adding node_account for node '$nodeAddress'"
       bondAddress=$nodeAddress
@@ -180,7 +180,7 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
   bondAddress=$nodeAddress
 
   echo "Adding genesis account for '$nodeAddress'"
-  thornode add-genesis-account $nodeAddress 1000000000000rune
+  thornode add-genesis-account $nodeAddress 1000000000000000rune
 
   add_node_account \
     $nodeAddress \

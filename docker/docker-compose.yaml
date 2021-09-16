@@ -45,13 +45,12 @@ services:
       CHAIN_HOSTNAME: thornode1
       CHAIN_API: thornode1:1317
       CHAIN_RPC: thornode1:26657
-#      BINANCE_HOST: http://binance1:26660
-#      BTC_HOST: bitcoin1:18443
+      BTC_HOST: bitcoin1:18443
       DASH_HOST: dash1:19898
-      LTC_HOST: litecoin1:38443
-#      ETH_HOST: http://ethereum1:8545
-#      BCH_HOST: bitcoincash1:28443
-#      CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
+      # BINANCE_HOST: http://binance1:26660
+      # LTC_HOST: litecoin1:38443
+      # ETH_HOST: http://ethereum1:8545
+      # BCH_HOST: bitcoincash1:28443
       SIGNER_NAME: thorchain
       SIGNER_PASSWD: password
       SIGNER_SEED_PHRASE: animal possible inch item nut daughter shoot gain lonely garlic pledge frown snow alter hurdle future beach love must walk north umbrella skin enough
@@ -107,13 +106,13 @@ services:
       CHAIN_HOSTNAME: thornode2
       CHAIN_API: thornode2:1317
       CHAIN_RPC: thornode2:26657
-      #      BINANCE_HOST: http://binance1:26660
-      #      BTC_HOST: bitcoin1:18443
+      BTC_HOST: bitcoin1:18443
       DASH_HOST: dash1:19898
-      LTC_HOST: litecoin1:38443
-      #      ETH_HOST: http://ethereum1:8545
-      #      BCH_HOST: bitcoincash1:28443
-      #      CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
+      # BINANCE_HOST: http://binance1:26660
+      # LTC_HOST: litecoin1:38443
+      # ETH_HOST: http://ethereum1:8545
+      # BCH_HOST: bitcoincash1:28443
+      # CONTRACT: 0xE65e9d372F8cAcc7b6dfcd4af6507851Ed31bb44
       SIGNER_NAME: thorchain
       SIGNER_PASSWD: password
       SIGNER_SEED_PHRASE: pair material jealous clip silly fly cry mule organ result topple conduct purchase marine library modify smart wood menu service such option reveal punch
@@ -193,17 +192,57 @@ services:
       thornode:
         ipv4_address: 172.32.62.4
 
-  litecoin1:
-    container_name: litecoin1
-    hostname: litecoin1
+  bitcoin1:
+    container_name: bitcoin1
+    hostname: bitcoin1
     restart: unless-stopped
     ports:
-      - 38443:38443
-    image: registry.gitlab.com/thorchain/devops/litecoin-core:0.18.1
+      - 18443:18443
+      # - 18444:18444 (shouldn't need the P2P as it's outbound?)
+    image: registry.gitlab.com/thorchain/devops/bitcoin-core:0.21.1
     environment:
       RPC_PORT: "38443"
-      BLOCK_TIME: ${BLOCK_TIME:-1}
+      BLOCK_TIME: 5
     entrypoint: "/scripts/entrypoint-mock.sh"
+    networks:
+      - thornode
+
+  midgard:
+    container_name: midgard
+    hostname: midgard
+    image: registry.gitlab.com/thorchain/midgard:develop
+    restart: unless-stopped
+    environment:
+      MIDGARD_THORCHAIN_THOR_NODE_URL: http://thornode1:1317/thorchain
+      MIDGARD_THORCHAIN_TENDERMINT_URL: http://thornode1:26657/websocket
+      MIDGARD_TIMESCALE_HOST: midgard-db
+      MIDGARD_THORCHAIN_LAST_CHAIN_BACKOFF: ${THOR_BLOCK_TIME:-5s}
+    ports:
+      - 8080:8080
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "128m"
+        max-file: "3"
+    networks:
+      - thornode
+
+  midgard-db:
+    container_name: midgard-db
+    hostname: midgard-db
+    restart: unless-stopped
+    image: timescale/timescaledb:2.2.0-pg13
+    environment:
+      - POSTGRES_USER=midgard
+      - POSTGRES_PASSWORD=password
+    command: postgres -c 'max_connections=250'
+    volumes:
+      - midgard:/docker-entrypoint-initdb.d/
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "32m"
+        max-file: "3"
     networks:
       - thornode
 
@@ -216,6 +255,7 @@ volumes:
   thornode2bond:
   bifrost2:
   bifrost2etc:
+  midgard:
 
 networks:
   thornode:
