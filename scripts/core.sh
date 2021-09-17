@@ -111,7 +111,7 @@ add_vault() {
     .app_state.thorchain.vaults += [{
       "block_height": "0",
       "pub_key": "$POOL_PUBKEY",
-      "chains":["THOR", "DASH", "BTC"],
+      "chains":["THOR", "DASH", "BCH"],
       "coins":[],
       "type": "AsgardVault",
       "status":"ActiveVault",
@@ -329,6 +329,18 @@ wait_for_block() {
     sleep 1
   done
   # echo "Reached block $2"
+}
+
+waitforblock() {
+  echo "Waiting for node ($1) to reach block $2..."
+  while true; do
+    block=$(dash-cli -rpcconnect=$1 getblockcount 2>/dev/null)
+    if [[ "$block" -ge "$2" ]]; then
+      break
+    fi
+    sleep 1
+  done
+  echo "Block $2 reached."
 }
 
 wait_for_next_block() {

@@ -1,0 +1,725 @@
+
+---------------- Thornode Configuration ----------------
+NODE_IP                  172.32.62.4
+SIGNER_NAME              thorchain
+SIGNER_PASSWD            password
+MASTER_ADDR              yWAMW2PfX6znBr9zxerJS6vp12nbPecKx6
+
+Writing config file to: /dash/.dashcore/dash.conf
+Waiting for node (dash1) to reach block 500...
+Block 500 reached.
+Waiting for node (dash4) to reach block 500...
+Block 500 reached.
+Sending 1001 DASH to masternode fund address yXJDsVw83epgLmJbZSeyXaJ42kbUQnVJXr
+Fund tx hash: e17ede2ac02a1bae776a7119f73a71fc673bb26af4166b84d1a0f5aa777a0655
+Sending 1001 DASH to masternode collateral address yRy1GPFLewJdXNycDEft2GmZPK1MMbXXiF
+Collateral tx hash: acf78a3364f8f2782d3f817c9f80f0ee61681802ec980ec16c1801806b939ec5
+Generating confirmation blocks...
+[
+  "52cc901ca1fe5bd1d5210153fee7fd55c82d86bb96364335b17a88f12075410f",
+  "25ec3a53fbab20a31a5e24b54b02da1bdf460cca73c6d85aa174f86244b2414a",
+  "375cf8d93c0ee280db0b2696f500a00ad708ce0fd7e83a599615648feaf0e6b9",
+  "464a21f3a46589b3c77ebcda2127561510eda2c95bb438825da29d941ac4e694",
+  "6b74d50533e453d28ca62408033740f527872d0aac09d0eff350d5511baf2740",
+  "288d74f60662f1cc43fa1697ddffc198df0d2ecf0e22dba7e41a45852e500d03",
+  "1abed81b552a51701aef75a5d2f2806401b55f2c7852a8eae1010797ebd3e4e2",
+  "7778a3da3f28e9e73a282974cfce64a50b529dbf3c3ebafeed59b4d40962ad1c",
+  "378fc8b06a6730a910e57de5c18bda7476da37ec7f8fc3f79e87e0f227a30ddc",
+  "3ccb314c4afb607112b37b8720fe5e541a4022373b3708ab98444c2d564a2506",
+  "60f23fdf456d3be25441106576c04c1bd73b1a06e60345aec809c592f3fc2bd4",
+  "46d117ddc6a6af602897091347847a242aabdecdffd420dd57aa337246629559",
+  "455f9c6904dd06d952086144bce53a0ebc10e1582f7f957140b136640e60e4cb",
+  "4b3bd03beda6e41778776a042ca8308112a1bb1614b762aabc8583f6e2773a9a",
+  "1e722a901ed7a0c2acd19d1ee2f0065d436a264bcd486585a727d1dc0beca006",
+  "14588bda9b428580dc3376e5010209cfd11733236b87cbe6857e95ef3842fa85",
+  "3b2d19b37b29bca6654738eb9fadc61fb605bd3aa855e99afd04ae04ec57cb22",
+  "08a6a80d5af3e453c70e9db7e6af71dee203f364508b5a37407df48f9d53a094",
+  "6d6fd9a68a3432af0110497b4dfa790ef1019ce92bc6a6bf379949774ad9f960",
+  "080136b2659124ed2f0f92925a56d5046724b598a2831515dd7e2906120a714a"
+]
+Balance of fund address
+{
+  "balance": 100100000000,
+  "received": 100100000000
+}
+Balance of collateral address
+{
+  "balance": 100100000000,
+  "received": 100100000000
+}
+Current addresses and balances:
+[
+  [
+    [
+      "yRy1GPFLewJdXNycDEft2GmZPK1MMbXXiF",
+      1001.00000000,
+      ""
+    ]
+  ],
+  [
+    [
+      "yXJDsVw83epgLmJbZSeyXaJ42kbUQnVJXr",
+      1001.00000000,
+      ""
+    ]
+  ]
+]
+
+--------------- Masternode Configuration ---------------
+collateralAddress        yRy1GPFLewJdXNycDEft2GmZPK1MMbXXiF
+collateralHash           acf78a3364f8f2782d3f817c9f80f0ee61681802ec980ec16c1801806b939ec5
+collateralVout           1
+ipPort                   172.32.62.4:19899
+ownerAddress             yQKrSahycQ6U7EXJm6LmXFNZgKisfYKDCM
+operatorPrivkey          6df956d479823f01f3d68617f09eaf102e00dcf749f6a38f47a7cae9c045ccdf
+operatorPubkey           8358955e13d5d441a123407ce0f1d0bba225ae9820d9331e2399e3d4144cf3c344cdac15f3e628fa209b6cdd860a319e
+votingAddress            yUA8rFqUdnSsnftE5NySPafF5NY9CT54ax
+operatorReward           0
+payoutAddress            yeQUR5XgwGwDD22pYjuMnbo4d5VRsMyYGQ
+feeSourceAddress         yQKrSahycQ6U7EXJm6LmXFNZgKisfYKDCM
+fundAddress              yXJDsVw83epgLmJbZSeyXaJ42kbUQnVJXr
+
+Sending protx register command
+Protx registration tx hash: b37971ea50a6ddee8f8ff2ec78612530def940673a887d2340c8a40813781472
+Protx not accepted by genesis node, re-sending...
+Protx not accepted by genesis node, re-sending...
+Protx not accepted by genesis node, re-sending...
+Protx accepted by genesis node!
+Setting masternode operator bls key in dash.conf
+Restarting dashd to initiate masternode sync
+Sending SIGTERM to process 38...
+Process 38 terminated.
+Started new dashd process 136
+Waiting for node (dash4) verification...
+Dash node ready.
+Waiting for masternode (dash4) to reach READY state...
+Masternode ready.
+Waiting for masternode (dash4) to reach MASTERNODE_SYNC_FINISHED state...
+Masternode ready.
+Adding other masternode peers...
+Waiting for node (dash4) to establish 3 peer connections...
+Node dash4 has 3 peers.
+Waiting for quorum 'llmq_test' to be established...
+Finished setting up the LLMQ in 41 seconds
+Following dashd log from start:
+2021-09-17 18:52:10 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2021-09-17 18:52:10 Dash Core version v0.16.1.1
+2021-09-17 18:52:10 InitParameterInteraction: parameter interaction: -bind set -> setting -listen=1
+2021-09-17 18:52:10 InitParameterInteraction: parameter interaction: -connect set -> setting -dnsseed=0
+2021-09-17 18:52:10 InitParameterInteraction: parameter interaction: -whitelistforcerelay=1 -> setting -whitelistrelay=1
+2021-09-17 18:52:10 InitParameterInteraction: parameter interaction: additional indexes -> setting -checklevel=4
+2021-09-17 18:52:10 Validating signatures for all blocks.
+2021-09-17 18:52:10 Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2021-09-17 18:52:10 ParameterInteraction: parameter interaction: -masternodeblsprivkey set -> setting -disablewallet=1
+2021-09-17 18:52:10 fDisableGovernance 0
+2021-09-17 18:52:10 Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
+2021-09-17 18:52:10 Using RdRand as an additional entropy source
+2021-09-17 18:52:10 Default data directory /dash/.dashcore
+2021-09-17 18:52:10 Using data directory /dash/.dashcore/regtest
+2021-09-17 18:52:10 Using config file /dash/.dashcore/dash.conf
+2021-09-17 18:52:10 Using at most 125 automatic connections (1048576 file descriptors available)
+2021-09-17 18:52:10 Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+2021-09-17 18:52:10 Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+2021-09-17 18:52:10 Using 4 threads for script verification
+2021-09-17 18:52:10 RenameThread: thread new name dash-scriptch
+2021-09-17 18:52:10 RenameThread: thread new name dash-scriptch
+2021-09-17 18:52:10 CSporkManager::SetPrivKey -- Successfully initialized as spork signer
+2021-09-17 18:52:10 RenameThread: thread new name dash-scheduler
+2021-09-17 18:52:10 scheduler thread start
+2021-09-17 18:52:10 HTTP: creating work queue of depth 16
+2021-09-17 18:52:10 Config options rpcuser and rpcpassword will soon be deprecated. Locally-run instances may remove rpcuser to use cookie-based auth, or may be replaced with rpcauth. Please see share/rpcuser for rpcauth auth generation.
+2021-09-17 18:52:10 HTTP: starting 4 worker threads
+2021-09-17 18:52:10 RenameThread: thread new name dash-httpworker
+2021-09-17 18:52:10 RenameThread: thread new name dash-httpworker
+2021-09-17 18:52:10 RenameThread: thread new name dash-httpworker
+2021-09-17 18:52:10 RenameThread: thread new name dash-http
+2021-09-17 18:52:10 RenameThread: thread new name dash-httpworker
+2021-09-17 18:52:10 AddLocal(172.32.62.4:19899,4)
+2021-09-17 18:52:10 init message: Loading sporks cache...
+2021-09-17 18:52:10 Reading info from sporks.dat...
+2021-09-17 18:52:10 Loaded info from sporks.dat  0ms
+2021-09-17 18:52:10      Sporks: 0
+2021-09-17 18:52:10 Read: Cleaning....
+2021-09-17 18:52:10      Sporks: 0
+2021-09-17 18:52:10 Cache configuration:
+2021-09-17 18:52:10 * Using 37.5MiB for block index database
+2021-09-17 18:52:10 * Using 8.0MiB for chain state database
+2021-09-17 18:52:10 * Using 254.5MiB for in-memory UTXO set (plus up to 286.1MiB of unused mempool space)
+2021-09-17 18:52:10 init message: Loading block index...
+2021-09-17 18:52:10 Opening LevelDB in /dash/.dashcore/regtest/blocks/index
+2021-09-17 18:52:10 RenameThread: thread new name dash-scriptch
+2021-09-17 18:52:10 Opened LevelDB successfully
+2021-09-17 18:52:10 Using obfuscation key for /dash/.dashcore/regtest/blocks/index: 0000000000000000
+2021-09-17 18:52:10 Opening LevelDB in /dash/.dashcore/regtest/evodb
+2021-09-17 18:52:10 Opened LevelDB successfully
+2021-09-17 18:52:10 Using obfuscation key for /dash/.dashcore/regtest/evodb: 0000000000000000
+2021-09-17 18:52:10 Opening LevelDB in /dash/.dashcore/regtest/llmq
+2021-09-17 18:52:10 Opened LevelDB successfully
+2021-09-17 18:52:10 Using obfuscation key for /dash/.dashcore/regtest/llmq: 0000000000000000
+2021-09-17 18:52:10 RenameThread: thread new name dash-cl-scheduler
+2021-09-17 18:52:10 cl-scheduler thread start
+2021-09-17 18:52:10 LoadBlockIndexDB: last block file = 0
+2021-09-17 18:52:10 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=559, size=132145, heights=0...558, time=2014-12-04...2021-09-17)
+2021-09-17 18:52:10 Checking all blk files are present...
+2021-09-17 18:52:10 LoadBlockIndexDB: transaction index enabled
+2021-09-17 18:52:10 LoadBlockIndexDB: address index enabled
+2021-09-17 18:52:10 LoadBlockIndexDB: timestamp index disabled
+2021-09-17 18:52:10 LoadBlockIndexDB: spent index enabled
+2021-09-17 18:52:10 Opening LevelDB in /dash/.dashcore/regtest/chainstate
+2021-09-17 18:52:10 Opened LevelDB successfully
+2021-09-17 18:52:10 Using obfuscation key for /dash/.dashcore/regtest/chainstate: 6682f368eeb5c21e
+2021-09-17 18:52:10 Loaded best chain: hashBestChain=0a393e82ec6e0ce51166f7c892f7e6172034686177cf19399c7ebce91bb782e3 height=558 date=2021-09-17 18:53:32 progress=1.000000
+2021-09-17 18:52:10 init message: Verifying blocks...
+2021-09-17 18:52:10 Verifying last 6 blocks at level 4
+2021-09-17 18:52:10 [0%]...[16%]...[25%]...[33%]...[41%]...[50%]...ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 [DONE].
+2021-09-17 18:52:10 No coin database inconsistencies in last 7 blocks (7 transactions)
+2021-09-17 18:52:10  block index             113ms
+2021-09-17 18:52:10 Wallet disabled!
+2021-09-17 18:52:10 MASTERNODE:
+2021-09-17 18:52:10   blsPubKeyOperator: 8358955e13d5d441a123407ce0f1d0bba225ae9820d9331e2399e3d4144cf3c344cdac15f3e628fa209b6cdd860a319e
+2021-09-17 18:52:10 init message: Loading masternode cache...
+2021-09-17 18:52:10 Reading info from mncache.dat...
+2021-09-17 18:52:10 Loaded info from mncache.dat  0ms
+2021-09-17 18:52:10      Masternodes: meta infos object count: 0, nDsqCount: 0
+2021-09-17 18:52:10 Read: Cleaning....
+2021-09-17 18:52:10      Masternodes: meta infos object count: 0, nDsqCount: 0
+2021-09-17 18:52:10 init message: Loading governance cache...
+2021-09-17 18:52:10 Reading info from governance.dat...
+2021-09-17 18:52:10 Loaded info from governance.dat  0ms
+2021-09-17 18:52:10      Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:10 Read: Cleaning....
+2021-09-17 18:52:10      Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:10 Preparing masternode indexes and governance triggers...
+2021-09-17 18:52:10 Masternode indexes and governance triggers prepared  0ms
+2021-09-17 18:52:10      Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:10 init message: Loading fulfilled requests cache...
+2021-09-17 18:52:10 Reading info from netfulfilled.dat...
+2021-09-17 18:52:10 Loaded info from netfulfilled.dat  0ms
+2021-09-17 18:52:10      Nodes with fulfilled requests: 0
+2021-09-17 18:52:10 Read: Cleaning....
+2021-09-17 18:52:10      Nodes with fulfilled requests: 0
+2021-09-17 18:52:10 RenameThread: thread new name dash-bls-worker-0
+2021-09-17 18:52:10 RenameThread: thread new name dash-bls-worker-1
+2021-09-17 18:52:10 RenameThread: thread new name dash-bls-worker-2
+2021-09-17 18:52:10 RenameThread: thread new name dash-bls-worker-3
+2021-09-17 18:52:10 RenameThread: thread new name dash-q-phase-100
+2021-09-17 18:52:10 q-phase-100 thread start
+2021-09-17 18:52:10 RenameThread: thread new name dash-sigshares
+2021-09-17 18:52:10 sigshares thread start
+2021-09-17 18:52:10 RenameThread: thread new name dash-instantsend
+2021-09-17 18:52:10 instantsend thread start
+2021-09-17 18:52:10 mapBlockIndex.size() = 559
+2021-09-17 18:52:10 chainActive.Height() = 558
+2021-09-17 18:52:10 RenameThread: thread new name dash-loadblk
+2021-09-17 18:52:10 Leaving InitialBlockDownload (latching to false)
+2021-09-17 18:52:10 Filling coin cache with masternode UTXOs...
+2021-09-17 18:52:10 Filling coin cache with masternode UTXOs: done in 0ms
+2021-09-17 18:52:10 Bound to 0.0.0.0:19899
+2021-09-17 18:52:10 init message: Loading P2P addresses...
+2021-09-17 18:52:10 Loaded 1 addresses from peers.dat  1ms
+2021-09-17 18:52:10 init message: Loading banlist...
+2021-09-17 18:52:10 init message: Starting network threads...
+2021-09-17 18:52:10 DNS seeding disabled
+2021-09-17 18:52:10 RenameThread: thread new name dash-addcon
+2021-09-17 18:52:10 addcon thread start
+2021-09-17 18:52:10 RenameThread: thread new name dash-net
+2021-09-17 18:52:10 net thread start
+2021-09-17 18:52:10 init message: Done loading
+2021-09-17 18:52:10 RenameThread: thread new name dash-torcontrol
+2021-09-17 18:52:10 torcontrol thread start
+2021-09-17 18:52:10 RenameThread: thread new name dash-opencon
+2021-09-17 18:52:10 opencon thread start
+2021-09-17 18:52:10 Imported mempool transactions from disk: 1 succeeded, 0 failed, 0 expired, 0 already there
+2021-09-17 18:52:10 RenameThread: thread new name dash-msghand
+2021-09-17 18:52:10 msghand thread start
+2021-09-17 18:52:10 RenameThread: thread new name dash-mncon
+2021-09-17 18:52:10 mncon thread start
+2021-09-17 18:52:10 mncon thread exit
+2021-09-17 18:52:10 New outbound peer connected: version: 70218, blocks=559, peer=0, peeraddr=172.32.62.1:19899
+2021-09-17 18:52:10 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:10 CDeterministicMNManager::BuildNewListFromBlock -- MN b37971ea50a6ddee8f8ff2ec78612530def940673a887d2340c8a40813781472 added at height 559: CProRegTx(nVersion=1, collateralOutpoint=0000000000000000000000000000000000000000000000000000000000000000-1, addr=172.32.62.4:19899, nOperatorReward=0.000000, ownerAddress=yQKrSahycQ6U7EXJm6LmXFNZgKisfYKDCM, pubKeyOperator=8358955e13d5d441a123407ce0f1d0bba225ae9820d9331e2399e3d4144cf3c344cdac15f3e628fa209b6cdd860a319e, votingAddress=yUA8rFqUdnSsnftE5NySPafF5NY9CT54ax, scriptPayout=yeQUR5XgwGwDD22pYjuMnbo4d5VRsMyYGQ)
+2021-09-17 18:52:10 UpdateTip: new best=4a52c8db129ee825fcee7554e460f2853fea27a0b8c38a1f5dcdca03da037543 height=559 version=0x20000020 log2_work=10.12928302 tx=612 date='2021-09-17 18:53:32' progress=1.000000 cache=0.0MiB(4txo) evodb_cache=0.0MiB
+2021-09-17 18:52:10 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:10 CActiveMasternodeManager::Init -- proTxHash=b37971ea50a6ddee8f8ff2ec78612530def940673a887d2340c8a40813781472, proTx=CDeterministicMN(proTxHash=b37971ea50a6ddee8f8ff2ec78612530def940673a887d2340c8a40813781472, collateralOutpoint=b37971ea50a6ddee8f8ff2ec78612530def940673a887d2340c8a40813781472-1, nOperatorReward=0.000000, state=CDeterministicMNState(nRegisteredHeight=559, nLastPaidHeight=0, nPoSePenalty=0, nPoSeRevivedHeight=-1, nPoSeBanHeight=-1, nRevocationReason=0, ownerAddress=yQKrSahycQ6U7EXJm6LmXFNZgKisfYKDCM, pubKeyOperator=8358955e13d5d441a123407ce0f1d0bba225ae9820d9331e2399e3d4144cf3c344cdac15f3e628fa209b6cdd860a319e, votingAddress=yUA8rFqUdnSsnftE5NySPafF5NY9CT54ax, addr=172.32.62.4:19899, payoutAddress=yeQUR5XgwGwDD22pYjuMnbo4d5VRsMyYGQ, operatorPayoutAddress=none)
+2021-09-17 18:52:10 CActiveMasternodeManager::Init -- Checking inbound connection to '172.32.62.4:19899'
+2021-09-17 18:52:13 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:13 CDeterministicMNManager::BuildNewListFromBlock -- MN 622c39ea5a87825baac019709f4d4ed8c4f12d69b592d97f243b9bfe64c0c9d7 added at height 560: CProRegTx(nVersion=1, collateralOutpoint=0000000000000000000000000000000000000000000000000000000000000000-1, addr=172.32.62.2:19899, nOperatorReward=0.000000, ownerAddress=yMXizGAXUGJHyRwSD6s9J4LBC5UyVge7AP, pubKeyOperator=0f5b9e7efcd05fa769b06c461d0a46dee19859af6d17f339d248087160ec1a3bec0d16cc34d8d44aa19c375f69188b78, votingAddress=yWfyhHkGCPftEqpJCrL2taVDnReVLYXydd, scriptPayout=yMAc8nSBMZq3YDrRTsv4LJoJH1XaK8mV4U)
+2021-09-17 18:52:13 CDeterministicMNManager::BuildNewListFromBlock -- MN a811aa7ca51ad125869ef03fcb83737f7bd889c527b6289fdf1e0d19e29e8bdd added at height 560: CProRegTx(nVersion=1, collateralOutpoint=0000000000000000000000000000000000000000000000000000000000000000-1, addr=172.32.62.3:19899, nOperatorReward=0.000000, ownerAddress=ybEpmjwA456D7zCUz7fNWXwwFJnkKHq1tv, pubKeyOperator=8ec5c039d6a11c77fde821d4ed39629a530669df88b6b311d15910ac9b47229ac0f4028168a9f2794be3fd8e050afcc7, votingAddress=ySeV5thCz99kxKaTiRs4XvCV1Pp75j3zVY, scriptPayout=yWzbXiHUERVyfTgJooWhvJKujMyGKtVErj)
+2021-09-17 18:52:13 UpdateTip: new best=24fa02e5a5fd92936993dd3eaeebef690c506d317495046e36ed32b79ac01206 height=560 version=0x20000020 log2_work=10.13185696 tx=615 date='2021-09-17 18:53:33' progress=1.000000 cache=0.0MiB(12txo) evodb_cache=0.0MiB
+2021-09-17 18:52:13 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:17 CMasternodeSync::ProcessTick -- nTick 7 nCurrentAsset 1 nTriedPeerCount 0 nSyncProgress 0.000000
+2021-09-17 18:52:17 CMasternodeSync::SwitchToNextAsset -- Completed MASTERNODE_SYNC_BLOCKCHAIN in 7s
+2021-09-17 18:52:17 CMasternodeSync::SwitchToNextAsset -- Starting MASTERNODE_SYNC_GOVERNANCE
+2021-09-17 18:52:18 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:18 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:18 UpdateTip: new best=263d03a947a39e0f94a231875246acc14104193c68097d64e6dad997fed73420 height=561 version=0x20000020 log2_work=10.13442632 tx=616 date='2021-09-17 18:53:33' progress=1.000000 cache=0.0MiB(14txo) evodb_cache=0.0MiB
+2021-09-17 18:52:18 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:23 CMasternodeSync::ProcessTick -- nTick 13 nCurrentAsset 4 nTriedPeerCount 0 nSyncProgress 0.750000
+2021-09-17 18:52:23 CMasternodeSync::SwitchToNextAsset -- Completed MASTERNODE_SYNC_GOVERNANCE in 6s
+2021-09-17 18:52:23 CMasternodeSync::SwitchToNextAsset -- Sync has finished
+2021-09-17 18:52:23 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:23 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:23 UpdateTip: new best=4fcd7da1ec5e9b4f55f09ae1ae2616abd7c45557ee935dd168f619560cb6b383 height=562 version=0x20000020 log2_work=10.13699111 tx=618 date='2021-09-17 18:53:33' progress=1.000000 cache=0.0MiB(16txo) evodb_cache=0.0MiB
+2021-09-17 18:52:23 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:24 New outbound peer connected: version: 70218, blocks=562, peer=1, peeraddr=172.32.62.2:19899
+2021-09-17 18:52:25 socket send error Broken pipe (32) (peer=3)
+2021-09-17 18:52:25 ThreadSocketHandler -- removing node: peer=3 addr=172.32.62.3:19899 nRefCount=1 fInbound=0 fMasternode=0
+2021-09-17 18:52:25 connected to self at 172.32.62.4:55520, disconnecting
+2021-09-17 18:52:26 ThreadSocketHandler -- removing node: peer=4 addr=172.32.62.4:19899 nRefCount=1 fInbound=0 fMasternode=0
+2021-09-17 18:52:26 ThreadSocketHandler -- removing node: peer=5 addr=172.32.62.4:55520 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:52:26 ThreadSocketHandler -- removing node: peer=6 addr=172.32.62.2:33482 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:52:28 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:28 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:28 UpdateTip: new best=742bfa4a3378d1ac27a1be5eec197ee9fa742164a11b0af49fae8cb9f3c26535 height=563 version=0x20000020 log2_work=10.13955135 tx=620 date='2021-09-17 18:53:33' progress=1.000000 cache=0.0MiB(18txo) evodb_cache=0.0MiB
+2021-09-17 18:52:28 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:29 UpdateTip: new best=53a0998f697193e45e1c97a680de86e1a9966608726b734ec23e3ad2d130c8c9 height=564 version=0x20000020 log2_work=10.14210706 tx=622 date='2021-09-17 18:53:33' progress=1.000000 cache=0.0MiB(20txo) evodb_cache=0.0MiB
+2021-09-17 18:52:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 SPORK -- hash: 2a4e365de71428c6f3cc82da53f8b86f6885abbe30ee32e617cf62d3424e1992 id: 10008 value:          0 bestHeight: 564 peer=2 new
+2021-09-17 18:52:29 SPORK -- hash: daad80ec4e2e363b42e0b47bf309f3263751098c0a963a142fb06830aa1d1c3c id: 10016 value:          0 bestHeight: 564 peer=2 new
+2021-09-17 18:52:29 SPORK -- hash: f13624b7c205222ccfc85bb4b5ab15f88c14e3bb0681fd7eb8d8b722a25cc7cb id: 10018 value:          0 bestHeight: 564 peer=2 new
+2021-09-17 18:52:29 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=832f597163b5c611194a5b792684fb13e733a9c368d2f22696de4eafd535ed74, msgHash=53a0998f697193e45e1c97a680de86e1a9966608726b734ec23e3ad2d130c8c9
+2021-09-17 18:52:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:29 UpdateTip: new best=21731aca960d6dd1280fda846b8c9adbc502018a0b8bbf320dbf84658c6a2cfc height=565 version=0x20000020 log2_work=10.14465824 tx=624 date='2021-09-17 18:53:33' progress=1.000000 cache=0.0MiB(22txo) evodb_cache=0.0MiB
+2021-09-17 18:52:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=83e20d6db6b85e52047027a9b00dc81ea996e82cfe568a878988e1b16ceff612, msgHash=21731aca960d6dd1280fda846b8c9adbc502018a0b8bbf320dbf84658c6a2cfc
+2021-09-17 18:52:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:29 UpdateTip: new best=5eace987331575eed59137656a75129ee46ca82fcb4f3cd4839f12e281f255cf height=566 version=0x20000020 log2_work=10.14720492 tx=626 date='2021-09-17 18:53:34' progress=1.000000 cache=0.0MiB(24txo) evodb_cache=0.0MiB
+2021-09-17 18:52:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=6a2387bc88b0e498225857972b0e153c5f3a30e368e4f70c72bc18e54f26f8d8, msgHash=5eace987331575eed59137656a75129ee46ca82fcb4f3cd4839f12e281f255cf
+2021-09-17 18:52:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:29 UpdateTip: new best=3353c9fefb2bbd326f04fb31b012ec3516a60f7578ba8a62607952253e00b22f height=567 version=0x20000020 log2_work=10.14974712 tx=628 date='2021-09-17 18:53:34' progress=1.000000 cache=0.0MiB(26txo) evodb_cache=0.0MiB
+2021-09-17 18:52:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=18767deb384422a9693d0d1f1b156a63c5605962da6c1f55f28c6966f0d70dc8, msgHash=3353c9fefb2bbd326f04fb31b012ec3516a60f7578ba8a62607952253e00b22f
+2021-09-17 18:52:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:29 UpdateTip: new best=57180f84f8bbaa94997d842df6ea42c41cb93bae0258b6e43179f43f1e8fbbee height=568 version=0x20000020 log2_work=10.15228484 tx=630 date='2021-09-17 18:53:34' progress=1.000000 cache=0.0MiB(28txo) evodb_cache=0.0MiB
+2021-09-17 18:52:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=9c64ac31143374739de6257c13845f3a998c2841cabd4c3367ea7f8ba378d58f, msgHash=57180f84f8bbaa94997d842df6ea42c41cb93bae0258b6e43179f43f1e8fbbee
+2021-09-17 18:52:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:29 UpdateTip: new best=311924fdcd83ced4a23379402c9e0c5a66e7dc4eb36a25e325acf492b9b68acf height=569 version=0x20000020 log2_work=10.15481811 tx=632 date='2021-09-17 18:53:34' progress=1.000000 cache=0.0MiB(30txo) evodb_cache=0.0MiB
+2021-09-17 18:52:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:29 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=a9ae7db1dcdc6e61534d90aacb31d20bcc73231ca9ee27301912faadff117e0a, msgHash=311924fdcd83ced4a23379402c9e0c5a66e7dc4eb36a25e325acf492b9b68acf
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=3976f0597cf5ba01a85cf0e3c6288504551a878e5c7de6f7cf35a84e7468b5ae height=570 version=0x20000020 log2_work=10.15734694 tx=634 date='2021-09-17 18:53:34' progress=1.000000 cache=0.0MiB(32txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=1f19f8af558376e6e7b1234a8661407320a570ee40110b88cec54f58644d4fcd, msgHash=3976f0597cf5ba01a85cf0e3c6288504551a878e5c7de6f7cf35a84e7468b5ae
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=7c6b7bbba89463bd4a71c14f74a53558373f92e21b30f67dec48addccfef70b2 height=571 version=0x20000020 log2_work=10.15987134 tx=635 date='2021-09-17 18:53:34' progress=1.000000 cache=0.0MiB(34txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=9d74beeaa32eefa85403dec3eb9d757d2d5ae120ea2036457f15a88537160492, msgHash=7c6b7bbba89463bd4a71c14f74a53558373f92e21b30f67dec48addccfef70b2
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=74f9d20b58ef10eaf583476a0711834d198848a987d1f7917f39992b445e7e16 height=572 version=0x20000020 log2_work=10.16239133 tx=636 date='2021-09-17 18:53:35' progress=1.000000 cache=0.0MiB(36txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=741d1bd3686a61e47c9867611e5d3d3517ec9992acc18bedc5ca21bfffae5732, msgHash=74f9d20b58ef10eaf583476a0711834d198848a987d1f7917f39992b445e7e16
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=27f66123155ab65f70c11cfe92b36e8b17d9f0933ce41c754eea31706fa57ff9 height=573 version=0x20000020 log2_work=10.16490693 tx=637 date='2021-09-17 18:53:35' progress=1.000000 cache=0.0MiB(38txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=c1595a6ead533b314df67a68dd82d64bfa4d40c947a336321edc24aee60f028a, msgHash=27f66123155ab65f70c11cfe92b36e8b17d9f0933ce41c754eea31706fa57ff9
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=37bf255b1c08da4c81085d70e9cdb46b833196cbd15e79cf914858b26495770f height=574 version=0x20000020 log2_work=10.16741815 tx=638 date='2021-09-17 18:53:35' progress=1.000000 cache=0.0MiB(40txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=8b99c84c67d276e243c10c682089568da5549b355349b28a188a5475a472715a, msgHash=37bf255b1c08da4c81085d70e9cdb46b833196cbd15e79cf914858b26495770f
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=0df4458f6e6d8871cb72a26685c92c68c98f0257d3fa978148a839c7a740b42d height=575 version=0x20000020 log2_work=10.16992500 tx=639 date='2021-09-17 18:53:35' progress=1.000000 cache=0.0MiB(42txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=22ac447405ca3343fa9bd6fd830ded013d8b93236041d4b3ec580ac4ce9536c6, msgHash=0df4458f6e6d8871cb72a26685c92c68c98f0257d3fa978148a839c7a740b42d
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CDeterministicMNManager::ProcessBlock -- Wrote snapshot. nHeight=576, mapCurMNs.allMNsCount=3
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=4ee2d0d255c6987f0459e82fac8e21c20e4b051f5ff3a6c5b7f7b93a55649b98 height=576 version=0x20000020 log2_work=10.17242751 tx=640 date='2021-09-17 18:53:35' progress=1.000000 cache=0.0MiB(44txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=155eb23e5677fd017b296e1ac2b6b7181118c56470574294984edddd6cf19735, msgHash=4ee2d0d255c6987f0459e82fac8e21c20e4b051f5ff3a6c5b7f7b93a55649b98
+2021-09-17 18:52:30 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:30 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:30 UpdateTip: new best=3bd05d5831b65f254a760b19e2e81d131b6ff964d94cf54a35f0b2065d70ab45 height=577 version=0x20000020 log2_work=10.17492568 tx=641 date='2021-09-17 18:53:35' progress=1.000000 cache=0.0MiB(46txo) evodb_cache=0.0MiB
+2021-09-17 18:52:30 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:30 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=4d6f12e49bc8a344d03cdfa1d0999363565e498a0c04cace3a10c9623e431832, msgHash=3bd05d5831b65f254a760b19e2e81d131b6ff964d94cf54a35f0b2065d70ab45
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=25af638db2c805680290d0cddffa13de88a4a29e91c2d19c484563d9faae8de0 height=578 version=0x20000020 log2_work=10.17741954 tx=642 date='2021-09-17 18:53:36' progress=1.000000 cache=0.0MiB(48txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=5e1262718f142cdea7cc3b12d8f6ea1854e6dc235cbf6d729502db0ae678b66a, msgHash=25af638db2c805680290d0cddffa13de88a4a29e91c2d19c484563d9faae8de0
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=68ee3afc9ae53aca7fca51f655b5037d56721cdc7c95c05e714e781e65e0eada height=579 version=0x20000020 log2_work=10.17990909 tx=643 date='2021-09-17 18:53:36' progress=1.000000 cache=0.0MiB(50txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=8c32b640c909661844af769ab96d0d81b6e36d836806a9bb78df8a6c64e5f795, msgHash=68ee3afc9ae53aca7fca51f655b5037d56721cdc7c95c05e714e781e65e0eada
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=4b2799a8c0991312a7560c47111a9fb9b535fbc86ea11d2dd1db5fb0417728c4 height=580 version=0x20000020 log2_work=10.18239435 tx=644 date='2021-09-17 18:53:36' progress=1.000000 cache=0.0MiB(52txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=6c646d5b0251ef05eac4a17c67a191eda8f7e4fd86dc0dae03f066d9bfa08e35, msgHash=4b2799a8c0991312a7560c47111a9fb9b535fbc86ea11d2dd1db5fb0417728c4
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=3a07dfd78531728e9187029b1233d450b1091845116a9c7fb44fbfb8a86c3e36 height=581 version=0x20000020 log2_work=10.18487534 tx=645 date='2021-09-17 18:53:36' progress=1.000000 cache=0.0MiB(54txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=703026ee4ab2e01b1a588452b032441b2aff5a17169ae9723b6dffafc7f804bc, msgHash=3a07dfd78531728e9187029b1233d450b1091845116a9c7fb44fbfb8a86c3e36
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=49df8f782ce9ccdf23183517e75aceb5c8260445e70312d4db6ecc12d1695f41 height=582 version=0x20000020 log2_work=10.18735207 tx=646 date='2021-09-17 18:53:36' progress=1.000000 cache=0.0MiB(56txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=2e7948a293ed5e363311c4ebe7f12650d24d7cfaa1257b0064f1d110b8b928d3, msgHash=49df8f782ce9ccdf23183517e75aceb5c8260445e70312d4db6ecc12d1695f41
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=5e07ecdfc3871756e132543e2b55c204891895357cc00c63a13ff391878a282f height=583 version=0x20000020 log2_work=10.18982456 tx=647 date='2021-09-17 18:53:36' progress=1.000000 cache=0.0MiB(58txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=5232237c69831a08b368b4226469ebcd1802d091e9ea80a401e50c7b8182ae23, msgHash=5e07ecdfc3871756e132543e2b55c204891895357cc00c63a13ff391878a282f
+2021-09-17 18:52:31 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:31 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:31 UpdateTip: new best=20953fcc2b34bc33836d68985c60fa2536436d22f847b670ec114fc6967aa640 height=584 version=0x20000020 log2_work=10.19229281 tx=648 date='2021-09-17 18:53:37' progress=1.000000 cache=0.0MiB(60txo) evodb_cache=0.0MiB
+2021-09-17 18:52:31 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:31 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=2b9e71437506c6d12eabae29ebdde4f69971125e20c67a17e82b029252aeca2f, msgHash=20953fcc2b34bc33836d68985c60fa2536436d22f847b670ec114fc6967aa640
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=5544f97210fc49e2f90af84ac75000312fe829910479501cc61d55a7c7c96f28 height=585 version=0x20000020 log2_work=10.19475685 tx=649 date='2021-09-17 18:53:37' progress=1.000000 cache=0.0MiB(62txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=5df9f788ae9868597e5e168cb90d18ab143d8590197d015030e13cf739ed64bc, msgHash=5544f97210fc49e2f90af84ac75000312fe829910479501cc61d55a7c7c96f28
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=2408508ac640faf61040ca0d8fc5c0bda5fff7543edd0206b65b8bbc9eec348c height=586 version=0x20000020 log2_work=10.19721669 tx=651 date='2021-09-17 18:53:37' progress=1.000000 cache=0.0MiB(64txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=4e7c0fa7afb0e52ed458d611ccfeff5d7f715e449de8d5d7b3476105d9171999, msgHash=2408508ac640faf61040ca0d8fc5c0bda5fff7543edd0206b65b8bbc9eec348c
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=22dedfd592446e82f62caad098147694c7dbe4e0952274d4496da504c538dac1 height=587 version=0x20000020 log2_work=10.19967234 tx=653 date='2021-09-17 18:53:37' progress=1.000000 cache=0.0MiB(66txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=4dbb12baef99cd3bc31d3581b4796e93e445507433b2cc4a219488e49cecd7d2, msgHash=22dedfd592446e82f62caad098147694c7dbe4e0952274d4496da504c538dac1
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CQuorumBlockProcessor::ProcessCommitment -- processed commitment from block. type=100, quorumHash=4ee2d0d255c6987f0459e82fac8e21c20e4b051f5ff3a6c5b7f7b93a55649b98, signers=3, validMembers=3, quorumPublicKey=0d132609503a1dc604b23ad89b5ee1f7b61be3a45f18fcadd850128878955c8020accdbd1959591bdf5610c416d7f6c3
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=33ecdb3cff30a571acac78418e1635853fb8fcc38f1fef3648dc1ca46a61c045 height=588 version=0x20000020 log2_work=10.20212382 tx=655 date='2021-09-17 18:53:37' progress=1.000000 cache=0.0MiB(68txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:32 CQuorumManager::BuildQuorumContributions -- built quorum vvec and skShare. time=0
+2021-09-17 18:52:32 CQuorum::StartCachePopulatorThread -- start
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=3d907b05d420cc1a89512027256439554217b3e92d0ce4364a28778d321ee1c6, msgHash=33ecdb3cff30a571acac78418e1635853fb8fcc38f1fef3648dc1ca46a61c045
+2021-09-17 18:52:32 RenameThread: thread new name dash-q-cachepop
+2021-09-17 18:52:32 CQuorum::StartCachePopulatorThread -- done. time=8
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=55cfb0593df56c89fb829f6873f82caea4d23eac433b0a256ae8418a44856cf5 height=589 version=0x20000020 log2_work=10.20457114 tx=656 date='2021-09-17 18:53:37' progress=1.000000 cache=0.0MiB(70txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=ae00636561613df126cec5c3b3379a57194a5b61d5d8c017d0a9e287e917011d, msgHash=55cfb0593df56c89fb829f6873f82caea4d23eac433b0a256ae8418a44856cf5
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=22aa381f8d48c4898ed1ce970b3ef56107d79e5da5209401637c426acd0de61f height=590 version=0x20000020 log2_work=10.20701432 tx=657 date='2021-09-17 18:53:38' progress=1.000000 cache=0.0MiB(72txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=75a5c04e326d974b4434124dbcdd2384061bbf1612b67ecba4539dcbe8cececc, msgHash=22aa381f8d48c4898ed1ce970b3ef56107d79e5da5209401637c426acd0de61f
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:32 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:32 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:32 UpdateTip: new best=021fc7c8c458dde99641936e82a767a1f4358e359089962f57db795b589c3079 height=591 version=0x20000020 log2_work=10.20945337 tx=658 date='2021-09-17 18:53:38' progress=1.000000 cache=0.0MiB(74txo) evodb_cache=0.0MiB
+2021-09-17 18:52:32 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=3d59810118208d4a8ea75b2df7d1bc4618b68bd6d48407ee85e2672517f50277, msgHash=021fc7c8c458dde99641936e82a767a1f4358e359089962f57db795b589c3079
+2021-09-17 18:52:32 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=1a13089fb954772c103a2151375e3cbd4d0911e708b7e5a8e3c60a281308c072 height=592 version=0x20000020 log2_work=10.21188829 tx=659 date='2021-09-17 18:53:38' progress=1.000000 cache=0.0MiB(76txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=98c0bd6804aa43052cb6ea007e0e140e4a39adf371fff97a94d7dd7ef1a034f2, msgHash=1a13089fb954772c103a2151375e3cbd4d0911e708b7e5a8e3c60a281308c072
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=7caca236b75d14f7df62fd53768a113e78583556f9d5563080c7e07802e6b798 height=593 version=0x20000020 log2_work=10.21431912 tx=660 date='2021-09-17 18:53:38' progress=1.000000 cache=0.0MiB(78txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=1b0d5b9f30421bb9da26a90f2d35971a3032dcd2eff82e284b2a6c1d2f806fb5, msgHash=7caca236b75d14f7df62fd53768a113e78583556f9d5563080c7e07802e6b798
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=43407490cf9627c17b26df5284f7e93990186e6c9a8aedda18d685d6cb72f037 height=594 version=0x20000020 log2_work=10.21674586 tx=661 date='2021-09-17 18:53:38' progress=1.000000 cache=0.0MiB(80txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=47ef37be155db88faf614952ad93eb37ddbcde5f940e2bdae2f4b3c73af3a45e, msgHash=43407490cf9627c17b26df5284f7e93990186e6c9a8aedda18d685d6cb72f037
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=0ab76c805f869308ba5829bae13f656405462f6372c773b30b1c44d435e0ee8a height=595 version=0x20000020 log2_work=10.21916852 tx=662 date='2021-09-17 18:53:38' progress=1.000000 cache=0.0MiB(82txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 CSigningManager::AsyncSignIfMember -- failed to select quorum. id=cb5123b0bcdc5ae5f72fd2927c024acbbd21cc6a5e07f443e0e35214ff5e7c9c, msgHash=0ab76c805f869308ba5829bae13f656405462f6372c773b30b1c44d435e0ee8a
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=1bd087526f7a8bcc346a922a2ec5c9f92d895163cad83caca873eca24597b69f height=596 version=0x20000020 log2_work=10.22158712 tx=663 date='2021-09-17 18:53:39' progress=1.000000 cache=0.0MiB(84txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=e38d8f744d213ddecaa1dd8fe763da3e0439e96d75a53d819d0cadbf997edd5a, id=52eb2488a782cc2ca1c6ad84fa1f08d629679e33dd9df4184855ec344348fd86, msgHash=1bd087526f7a8bcc346a922a2ec5c9f92d895163cad83caca873eca24597b69f, node=-1
+2021-09-17 18:52:33 UpdateTip: new best=4565835f3220a703df8fc74bef572c077240a68af25308a076e1a079f5e1391f height=597 version=0x20000020 log2_work=10.22400167 tx=664 date='2021-09-17 18:53:39' progress=1.000000 cache=0.0MiB(86txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 CSigningManager::ProcessMessageRecoveredSig -- signHash=705d6f07bb8406a56b40a474cb714fa86a7f050dc0007550ebfba64d9002fdb5, id=d9044fb3a25e1b3202bd8d8853f753fb8ee6b54045bc2ccfedc4eadf0eba6739, msgHash=4565835f3220a703df8fc74bef572c077240a68af25308a076e1a079f5e1391f, node=7
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=09dee00ceccc6d4e37d3220f26ab974d819ae6d16f3f19228d8ab2b52bba4486 height=598 version=0x20000020 log2_work=10.22641219 tx=665 date='2021-09-17 18:53:39' progress=1.000000 cache=0.0MiB(88txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:33 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=14, nodes=1
+2021-09-17 18:52:33 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=705d6f07bb8406a56b40a474cb714fa86a7f050dc0007550ebfba64d9002fdb5, id=d9044fb3a25e1b3202bd8d8853f753fb8ee6b54045bc2ccfedc4eadf0eba6739, msgHash=4565835f3220a703df8fc74bef572c077240a68af25308a076e1a079f5e1391f, node=7
+2021-09-17 18:52:33 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:33 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:33 UpdateTip: new best=056e6a768557a8b154249202175f9fde33d668c9e69556cf5786b7d1d14c8b06 height=599 version=0x20000020 log2_work=10.22881869 tx=666 date='2021-09-17 18:53:39' progress=1.000000 cache=0.0MiB(90txo) evodb_cache=0.0MiB
+2021-09-17 18:52:33 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessMessageRecoveredSig -- signHash=7346eb2e6393c7341117e1c6bca05b7bb0e50bd8d02121cb509dbec00999a53a, id=23d09d4a490b73a1449eb33dfbd35894307f14dcaa69d34440b915cec32c3a1d, msgHash=09dee00ceccc6d4e37d3220f26ab974d819ae6d16f3f19228d8ab2b52bba4486, node=1
+2021-09-17 18:52:34 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=13, nodes=1
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=7346eb2e6393c7341117e1c6bca05b7bb0e50bd8d02121cb509dbec00999a53a, id=23d09d4a490b73a1449eb33dfbd35894307f14dcaa69d34440b915cec32c3a1d, msgHash=09dee00ceccc6d4e37d3220f26ab974d819ae6d16f3f19228d8ab2b52bba4486, node=1
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=e32ddb956d0e5b5db9bdee07a2407ec0bdb11136563c19176b2946ca49a3ed8e, id=784dd5b02cd60cc9ab355aea0343f7f457d0e4b16d8d207b0fc2c2e4586493e4, msgHash=056e6a768557a8b154249202175f9fde33d668c9e69556cf5786b7d1d14c8b06, node=-1
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=1c759801490bd695af59330872351a60dcb5400a66f7bcbd346be11bae73efb0 height=600 version=0x20000020 log2_work=10.23122118 tx=667 date='2021-09-17 18:53:39' progress=1.000000 cache=0.0MiB(92txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessMessageRecoveredSig -- signHash=a9c1520da5bf424b0ae9638e429ffc55c005293dc78532eedce99ace6ab4845f, id=1520f83b294a70a595b959a2506a90e41e5de95f5abadc6dc4acac1be5e3bc13, msgHash=1c759801490bd695af59330872351a60dcb5400a66f7bcbd346be11bae73efb0, node=1
+2021-09-17 18:52:34 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=13, nodes=1
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=a9c1520da5bf424b0ae9638e429ffc55c005293dc78532eedce99ace6ab4845f, id=1520f83b294a70a595b959a2506a90e41e5de95f5abadc6dc4acac1be5e3bc13, msgHash=1c759801490bd695af59330872351a60dcb5400a66f7bcbd346be11bae73efb0, node=1
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=7d69b3a3218c874009a17442dbd5008f3d42544b7200c4908af02c96b8893b30 height=601 version=0x20000020 log2_work=10.23361968 tx=668 date='2021-09-17 18:53:39' progress=1.000000 cache=0.0MiB(94txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=902b341764156bbbf1b6f9ed7399ce07c1f8d15813d8aa8ec21b6586607a35bb, id=518c3dc9e1028ddb1270aa94f6639daf84d467b7d3a0d861ce339c444f71d67c, msgHash=7d69b3a3218c874009a17442dbd5008f3d42544b7200c4908af02c96b8893b30, node=-1
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=593529becb274a88cb65c903a4ed78eba1f69851f38d72961a5fb2f6bcfdfed6 height=602 version=0x20000020 log2_work=10.23601419 tx=669 date='2021-09-17 18:53:40' progress=1.000000 cache=0.0MiB(96txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessMessageRecoveredSig -- signHash=431784e5c99a7d73cb420cad60d8fe8b2ae4c3fe7f387f497bb5f5b620c4b088, id=73c7e9f0e8951a2cd78599fae87ebeab9cbb23044eae84bda625463c4985cf4a, msgHash=593529becb274a88cb65c903a4ed78eba1f69851f38d72961a5fb2f6bcfdfed6, node=7
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=5a2c0e1c6ec0d106620a6fdaf1844697fa344913e17e070f4b4a43214ce1874f height=603 version=0x20000020 log2_work=10.23840474 tx=670 date='2021-09-17 18:53:40' progress=1.000000 cache=0.0MiB(98txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=9, nodes=1
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=431784e5c99a7d73cb420cad60d8fe8b2ae4c3fe7f387f497bb5f5b620c4b088, id=73c7e9f0e8951a2cd78599fae87ebeab9cbb23044eae84bda625463c4985cf4a, msgHash=593529becb274a88cb65c903a4ed78eba1f69851f38d72961a5fb2f6bcfdfed6, node=7
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=6b5591bfd2afadb3e11cc40cdebdf5d0420ab75ce170f0eac61e1605cfe3c28b height=604 version=0x20000020 log2_work=10.24079133 tx=671 date='2021-09-17 18:53:40' progress=1.000000 cache=0.0MiB(100txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessMessageRecoveredSig -- signHash=1beb198ff96bc48c59fe48faba4eb3f7a380c2feead47c6b4d243fe5b915684c, id=d842864aab298ae9b45eb654ebbb809d1e2eecf25d4c02eb4127613f23138f95, msgHash=5a2c0e1c6ec0d106620a6fdaf1844697fa344913e17e070f4b4a43214ce1874f, node=7
+2021-09-17 18:52:34 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=12, nodes=1
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=1beb198ff96bc48c59fe48faba4eb3f7a380c2feead47c6b4d243fe5b915684c, id=d842864aab298ae9b45eb654ebbb809d1e2eecf25d4c02eb4127613f23138f95, msgHash=5a2c0e1c6ec0d106620a6fdaf1844697fa344913e17e070f4b4a43214ce1874f, node=7
+2021-09-17 18:52:34 CSigningManager::ProcessMessageRecoveredSig -- signHash=412aa832755ebe7a6fa3846ebe87e70f5184cdd94be08ca7610929d675561ce4, id=aefc88fd5db4483052a0cfebad61d3cd989db1010cba967f5720b69d6374d659, msgHash=6b5591bfd2afadb3e11cc40cdebdf5d0420ab75ce170f0eac61e1605cfe3c28b, node=7
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=7eb672faae9077f336185bcf5ec4940f2eeaf39bf82f80c301bf4fc3af661408 height=605 version=0x20000020 log2_work=10.24317398 tx=672 date='2021-09-17 18:53:40' progress=1.000000 cache=0.0MiB(102txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:34 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=11, nodes=1
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=412aa832755ebe7a6fa3846ebe87e70f5184cdd94be08ca7610929d675561ce4, id=aefc88fd5db4483052a0cfebad61d3cd989db1010cba967f5720b69d6374d659, msgHash=6b5591bfd2afadb3e11cc40cdebdf5d0420ab75ce170f0eac61e1605cfe3c28b, node=7
+2021-09-17 18:52:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=369aa96813dd7cf87f6cbd4ec43931860f5e9e2404e34fa613d15d51c676e563, id=ab7d8b57d50cd1b0d8198e51662ea906496e64c5409a910d92515da095803e32, msgHash=7eb672faae9077f336185bcf5ec4940f2eeaf39bf82f80c301bf4fc3af661408, node=-1
+2021-09-17 18:52:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:34 UpdateTip: new best=2db900f28412d38279808de531a1dddbd0ebfb0ebe00617c2c0e2ba0b04be028 height=606 version=0x20000020 log2_work=10.24555271 tx=673 date='2021-09-17 18:53:40' progress=1.000000 cache=0.0MiB(104txo) evodb_cache=0.0MiB
+2021-09-17 18:52:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:35 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=3accf90d967ea72cefce2a90d54c221dccd9a11bf266c3868414402f01d7b5b6, id=ecdeeea62ae5037aa086ba8fd308aec36f873488050d431b0c164d46a2e7599d, msgHash=2db900f28412d38279808de531a1dddbd0ebfb0ebe00617c2c0e2ba0b04be028, node=-1
+2021-09-17 18:52:35 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:35 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:35 UpdateTip: new best=5df23f4b64d8516bfad31fe23db7e4a22f0d5b1f7e0232b9ffbf2214c6b0fde7 height=607 version=0x20000020 log2_work=10.24792751 tx=674 date='2021-09-17 18:53:40' progress=1.000000 cache=0.0MiB(106txo) evodb_cache=0.0MiB
+2021-09-17 18:52:35 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:35 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=efc8ed4bae348ae7f0449c05679e9f675753d68c4de7b548aca3782f73b24bc1, id=725a9a38761315db86d42ce1e6603eeab2cb7ff434cccd67aa5f7b7aa93e9c05, msgHash=5df23f4b64d8516bfad31fe23db7e4a22f0d5b1f7e0232b9ffbf2214c6b0fde7, node=-1
+2021-09-17 18:52:35 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:35 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:35 UpdateTip: new best=16d04a47bf13373fdf28699874c63b4f17fc6b750d669a08d4e42de73f724a06 height=608 version=0x20000020 log2_work=10.25029842 tx=675 date='2021-09-17 18:53:41' progress=1.000000 cache=0.0MiB(108txo) evodb_cache=0.0MiB
+2021-09-17 18:52:35 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:35 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=8757340176040d51ac43abef7a443b53709aa300c18829f351e39f6fd19b1d30, id=3641f1ba7b8efad683e6c4487172f67e1c1e8492be6067d9c7d9bf24b776537e, msgHash=16d04a47bf13373fdf28699874c63b4f17fc6b750d669a08d4e42de73f724a06, node=-1
+2021-09-17 18:52:35 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:35 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:35 UpdateTip: new best=75cd3f14e707b5a695073a95cc750f67187a8dd98fb0dfeac77757996ff639af height=609 version=0x20000020 log2_work=10.25266543 tx=676 date='2021-09-17 18:53:41' progress=1.000000 cache=0.0MiB(110txo) evodb_cache=0.0MiB
+2021-09-17 18:52:35 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:35 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=5f886a9e70e84a999affffe4e24919e808812f9d70cfd03dce9c55c5e6c6c632, id=94ddf7f5b13a8df011ab8dc73c49e07068a1e22e6bfb824cebddc2bfc37d4d4f, msgHash=75cd3f14e707b5a695073a95cc750f67187a8dd98fb0dfeac77757996ff639af, node=-1
+2021-09-17 18:52:35 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:35 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:35 UpdateTip: new best=78bdca63e6dff58384d20464d20675e4c04c362274fea991a7576309e4a4ad43 height=610 version=0x20000020 log2_work=10.25502857 tx=678 date='2021-09-17 18:53:41' progress=1.000000 cache=0.0MiB(112txo) evodb_cache=0.0MiB
+2021-09-17 18:52:35 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:35 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=b6c7bdb12c8071125c29b09c8007fe63a2bf21928e7a36348952a55d06e4d8ba, id=e389ce0fa51a1ef166e245b4c262ec8ba5b2a6f661707272420f14494b9dd523, msgHash=78bdca63e6dff58384d20464d20675e4c04c362274fea991a7576309e4a4ad43, node=-1
+2021-09-17 18:52:35 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:35 CQuorumBlockProcessor::ProcessCommitment -- processed commitment from block. type=100, quorumHash=1c759801490bd695af59330872351a60dcb5400a66f7bcbd346be11bae73efb0, signers=3, validMembers=3, quorumPublicKey=88815c19876b3ada93489070c39a61672c046f7f276ed96a7cb0479a8f0a999a9242f3db510ac16ecb3892118abb5eaa
+2021-09-17 18:52:35 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:35 UpdateTip: new best=0a267905f09df4feda6a9b55208771abf51f9848908e7a14a53907d0349f4924 height=611 version=0x20000020 log2_work=10.25738784 tx=680 date='2021-09-17 18:53:41' progress=1.000000 cache=0.0MiB(114txo) evodb_cache=0.0MiB
+2021-09-17 18:52:35 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:35 CQuorumManager::BuildQuorumContributions -- built quorum vvec and skShare. time=0
+2021-09-17 18:52:35 CQuorum::StartCachePopulatorThread -- start
+2021-09-17 18:52:35 RenameThread: thread new name dash-q-cachepop
+2021-09-17 18:52:35 CQuorum::StartCachePopulatorThread -- done. time=6
+2021-09-17 18:52:35 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=e843313a4cff79f3dbca39b69fefb4f77bf58bf26c4ec7b8c5a026ee0caebefd, id=9a969c95e0d27ad9ea6eeb3a8088f3a39d6505f49c1d5ef9d72ed7fa96df1ea4, msgHash=0a267905f09df4feda6a9b55208771abf51f9848908e7a14a53907d0349f4924, node=-1
+2021-09-17 18:52:39 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:39 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:39 UpdateTip: new best=09bee888a98f3f8b4b9b689081f8708dd0f002a4a4bd7a5d48e2af9f3cbb236e height=612 version=0x20000020 log2_work=10.25974326 tx=681 date='2021-09-17 18:53:41' progress=1.000000 cache=0.0MiB(116txo) evodb_cache=0.0MiB
+2021-09-17 18:52:39 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:39 CSigningManager::ProcessMessageRecoveredSig -- signHash=80ae668477abaf1023c9fe465b8163c42270f2491ecbb74b9371a974b980db00, id=5cc713b08f23238731597e098dec8590981d3588b6864fda2292799c88bbc9c6, msgHash=09bee888a98f3f8b4b9b689081f8708dd0f002a4a4bd7a5d48e2af9f3cbb236e, node=1
+2021-09-17 18:52:39 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=80ae668477abaf1023c9fe465b8163c42270f2491ecbb74b9371a974b980db00, id=5cc713b08f23238731597e098dec8590981d3588b6864fda2292799c88bbc9c6, msgHash=09bee888a98f3f8b4b9b689081f8708dd0f002a4a4bd7a5d48e2af9f3cbb236e, node=-1
+2021-09-17 18:52:44 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:44 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:44 UpdateTip: new best=1eaf438a3cee75d3c28a04cd8cafa2630e1dad71b32bca1e49c07b96e767f81b height=613 version=0x20000020 log2_work=10.26209485 tx=683 date='2021-09-17 18:53:41' progress=1.000000 cache=0.0MiB(121txo) evodb_cache=0.0MiB
+2021-09-17 18:52:44 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:44 CSigningManager::ProcessMessageRecoveredSig -- signHash=ca07d37efa301ee3427c4c4f09fbda7cf144080896c546690f349e0902f7709d, id=a2188387cef4d0c66c3cee6fc89f5d2ed78f331db6a4d85cebe3c0abaf5d07fb, msgHash=1eaf438a3cee75d3c28a04cd8cafa2630e1dad71b32bca1e49c07b96e767f81b, node=1
+2021-09-17 18:52:44 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=ca07d37efa301ee3427c4c4f09fbda7cf144080896c546690f349e0902f7709d, id=a2188387cef4d0c66c3cee6fc89f5d2ed78f331db6a4d85cebe3c0abaf5d07fb, msgHash=1eaf438a3cee75d3c28a04cd8cafa2630e1dad71b32bca1e49c07b96e767f81b, node=-1
+2021-09-17 18:52:49 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:49 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:49 UpdateTip: new best=0f1e86a16b6be8a121d928374d6446820645eaf59adc1dbd53c9fbd3fa7fa691 height=614 version=0x20000020 log2_work=10.26444260 tx=684 date='2021-09-17 18:53:42' progress=1.000000 cache=0.0MiB(123txo) evodb_cache=0.0MiB
+2021-09-17 18:52:49 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:49 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=bd53d6914b544d1781ef74d2d3e93845fda195b3d66bd2bc007fe97ddb0ea5c3, id=f5608666b29c922314bd09882d8db38a3491764fd45cf54c8542b9a9770a8085, msgHash=0f1e86a16b6be8a121d928374d6446820645eaf59adc1dbd53c9fbd3fa7fa691, node=-1
+2021-09-17 18:52:54 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:54 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:54 UpdateTip: new best=637e76feca4d092df921faec491a78a1d09083c5998f2bf6058b95ab1b68e170 height=615 version=0x20000020 log2_work=10.26678654 tx=685 date='2021-09-17 18:53:42' progress=1.000000 cache=0.0MiB(125txo) evodb_cache=0.0MiB
+2021-09-17 18:52:54 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:54 CSigningManager::ProcessMessageRecoveredSig -- signHash=98cf2beb391cc8f77627b0734fa1ea7d1745fb7954b2080b3a2a04911d955f9b, id=60659e672a4b28a9430c62ef3bc786ca5b689abe85bdd29526525f7fb82d562c, msgHash=637e76feca4d092df921faec491a78a1d09083c5998f2bf6058b95ab1b68e170, node=1
+2021-09-17 18:52:54 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=10, nodes=1
+2021-09-17 18:52:54 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=98cf2beb391cc8f77627b0734fa1ea7d1745fb7954b2080b3a2a04911d955f9b, id=60659e672a4b28a9430c62ef3bc786ca5b689abe85bdd29526525f7fb82d562c, msgHash=637e76feca4d092df921faec491a78a1d09083c5998f2bf6058b95ab1b68e170, node=1
+2021-09-17 18:52:59 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:52:59 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:52:59 UpdateTip: new best=38eca14f5f4a7beca579190a0f8dc1c3213499881124525976df50855edbb0e8 height=616 version=0x20000020 log2_work=10.26912668 tx=686 date='2021-09-17 18:53:42' progress=1.000000 cache=0.0MiB(127txo) evodb_cache=0.0MiB
+2021-09-17 18:52:59 ProcessNewBlock : ACCEPTED
+2021-09-17 18:52:59 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=4b1beb527c100995890d9243a70b24913ed53f6926cb791335b6801af23b72a4, id=d078570d34186e1d15321e291dfc54ca05d5a090d8ebc9470965d9aa37d42c27, msgHash=38eca14f5f4a7beca579190a0f8dc1c3213499881124525976df50855edbb0e8, node=-1
+2021-09-17 18:53:04 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:04 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:04 UpdateTip: new best=6f40efbe2536641af1585d13525cfb64c04c8dc61c07930763b54951cbddc4d0 height=617 version=0x20000020 log2_work=10.27146303 tx=687 date='2021-09-17 18:53:42' progress=1.000000 cache=0.0MiB(129txo) evodb_cache=0.0MiB
+2021-09-17 18:53:04 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:04 CSigningManager::ProcessMessageRecoveredSig -- signHash=b7926c3d1465a305d1fc6db477832e78019a3316c8a38cda8d6dbd2f8d1fad5e, id=b71d035bc0fac0f4b80b8e63d36aa0abbee40136eccd38bff82f8c4e9911b8aa, msgHash=6f40efbe2536641af1585d13525cfb64c04c8dc61c07930763b54951cbddc4d0, node=1
+2021-09-17 18:53:04 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=b7926c3d1465a305d1fc6db477832e78019a3316c8a38cda8d6dbd2f8d1fad5e, id=b71d035bc0fac0f4b80b8e63d36aa0abbee40136eccd38bff82f8c4e9911b8aa, msgHash=6f40efbe2536641af1585d13525cfb64c04c8dc61c07930763b54951cbddc4d0, node=-1
+2021-09-17 18:53:09 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:09 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:09 UpdateTip: new best=69ec7a09db909e8052561f2b405645c0e2841d50812eb593af4994be6fae2e93 height=618 version=0x20000020 log2_work=10.27379560 tx=688 date='2021-09-17 18:53:42' progress=1.000000 cache=0.0MiB(131txo) evodb_cache=0.0MiB
+2021-09-17 18:53:09 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:09 CSigningManager::ProcessMessageRecoveredSig -- signHash=3c61dba271d9c85b1775a80308565c0142cd212bc898d2f11b21bf56ca48ea80, id=a61b07048df8a31af5ecaa5d4d41677205db10d04973ef6a784c34d9402e1032, msgHash=69ec7a09db909e8052561f2b405645c0e2841d50812eb593af4994be6fae2e93, node=1
+2021-09-17 18:53:09 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=3c61dba271d9c85b1775a80308565c0142cd212bc898d2f11b21bf56ca48ea80, id=a61b07048df8a31af5ecaa5d4d41677205db10d04973ef6a784c34d9402e1032, msgHash=69ec7a09db909e8052561f2b405645c0e2841d50812eb593af4994be6fae2e93, node=-1
+2021-09-17 18:53:14 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:14 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:14 UpdateTip: new best=5b7c98420b89c687b0b5207ae58545648583913f460c1845a416f1949b37f671 height=619 version=0x20000020 log2_work=10.27612441 tx=689 date='2021-09-17 18:53:42' progress=1.000000 cache=0.0MiB(133txo) evodb_cache=0.0MiB
+2021-09-17 18:53:14 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:14 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=82e417345d89513286a48c6ca68c9be16f6b70dd319c969de7117cf68e1dc230, id=d9b2d7a73cf1145902a53dcd5fd4f202ce6e36b5a0ca05971e6585375b5a047d, msgHash=5b7c98420b89c687b0b5207ae58545648583913f460c1845a416f1949b37f671, node=-1
+2021-09-17 18:53:19 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:19 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:19 UpdateTip: new best=4c02009919e8cbbb4dfaa7690d6a67870b8c8e433b934bc688e47c6c869578b9 height=620 version=0x20000020 log2_work=10.27844946 tx=690 date='2021-09-17 18:53:43' progress=1.000000 cache=0.0MiB(135txo) evodb_cache=0.0MiB
+2021-09-17 18:53:19 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:19 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=602590a77f4df900e3b85388a3aabb59eb68a633477de98e12bfe53e922535ac, id=75ce5e4dada16113925a709b2f6000196c829af1f0dd13044031c8a008de23d1, msgHash=4c02009919e8cbbb4dfaa7690d6a67870b8c8e433b934bc688e47c6c869578b9, node=-1
+2021-09-17 18:53:24 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:24 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:24 UpdateTip: new best=42977436d0f0b63cce3db67487d7636d1e30221b8912f5d7a74e729c0f650e77 height=621 version=0x20000020 log2_work=10.28077077 tx=691 date='2021-09-17 18:53:43' progress=1.000000 cache=0.0MiB(137txo) evodb_cache=0.0MiB
+2021-09-17 18:53:24 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:24 CSigningManager::ProcessMessageRecoveredSig -- signHash=da29f6c6a65758fb3655e6cf1cfaf4a4ede56647bb77b01b36ad57a79c2a199a, id=e9ad1da750e55627fbe94c7e0a2a5f531356030ef647129995986fde2aa86312, msgHash=42977436d0f0b63cce3db67487d7636d1e30221b8912f5d7a74e729c0f650e77, node=7
+2021-09-17 18:53:24 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=da29f6c6a65758fb3655e6cf1cfaf4a4ede56647bb77b01b36ad57a79c2a199a, id=e9ad1da750e55627fbe94c7e0a2a5f531356030ef647129995986fde2aa86312, msgHash=42977436d0f0b63cce3db67487d7636d1e30221b8912f5d7a74e729c0f650e77, node=-1
+2021-09-17 18:53:26 New outbound peer connected: version: 70218, blocks=621, peer=8, peeraddr=172.32.62.3:19899
+2021-09-17 18:53:26 ThreadSocketHandler -- removing node: peer=7 addr=172.32.62.3:51376 nRefCount=2 fInbound=1 fMasternode=0
+2021-09-17 18:53:26 connected to self at 172.32.62.4:57720, disconnecting
+2021-09-17 18:53:27 ThreadSocketHandler -- removing node: peer=9 addr=172.32.62.4:19899 nRefCount=1 fInbound=0 fMasternode=0
+2021-09-17 18:53:27 ThreadSocketHandler -- removing node: peer=10 addr=172.32.62.4:57720 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:53:28 ThreadSocketHandler -- removing node: peer=11 addr=172.32.62.2:35764 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:53:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:29 UpdateTip: new best=4eb35c0dbe5424d76e6f370a7c708a90bc60697af7762ac86161fbc2ac5359e5 height=622 version=0x20000020 log2_work=10.28308835 tx=692 date='2021-09-17 18:53:43' progress=1.000000 cache=0.0MiB(139txo) evodb_cache=0.0MiB
+2021-09-17 18:53:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:29 CSigningManager::ProcessMessageRecoveredSig -- signHash=a62a860449314e6f8636c5dc29f71edd59130e2df2fe371524965aa27108a632, id=c1dbe0d22d3ab89608bb7a759dc6294a6ff197106f002fafe40538e43d99ff74, msgHash=4eb35c0dbe5424d76e6f370a7c708a90bc60697af7762ac86161fbc2ac5359e5, node=1
+2021-09-17 18:53:29 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=a62a860449314e6f8636c5dc29f71edd59130e2df2fe371524965aa27108a632, id=c1dbe0d22d3ab89608bb7a759dc6294a6ff197106f002fafe40538e43d99ff74, msgHash=4eb35c0dbe5424d76e6f370a7c708a90bc60697af7762ac86161fbc2ac5359e5, node=-1
+2021-09-17 18:53:32 ThreadSocketHandler -- removing node: peer=12 addr=172.32.62.3:53678 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:53:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:34 UpdateTip: new best=3d342f555eb1d4167244f15d82591fc8cc18b2ada93362357fd6a48b260a0629 height=623 version=0x20000020 log2_work=10.28540222 tx=693 date='2021-09-17 18:53:43' progress=1.000000 cache=0.0MiB(141txo) evodb_cache=0.0MiB
+2021-09-17 18:53:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:34 CSigningManager::ProcessMessageRecoveredSig -- signHash=27104829ae61845dfe57fde2998fe5ea916f9053779607b992643a03eaddc15a, id=537286e3d0b30793082667d77e3cdd66c9facae0eb73c45b56c095b21855e004, msgHash=3d342f555eb1d4167244f15d82591fc8cc18b2ada93362357fd6a48b260a0629, node=1
+2021-09-17 18:53:34 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=12, nodes=1
+2021-09-17 18:53:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=27104829ae61845dfe57fde2998fe5ea916f9053779607b992643a03eaddc15a, id=537286e3d0b30793082667d77e3cdd66c9facae0eb73c45b56c095b21855e004, msgHash=3d342f555eb1d4167244f15d82591fc8cc18b2ada93362357fd6a48b260a0629, node=1
+2021-09-17 18:53:39 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:39 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:39 UpdateTip: new best=04547b57aa310e8231426ced388f4fd2783314cbc5a9ff1f8ce06aa862ab09da height=624 version=0x20000020 log2_work=10.28771238 tx=694 date='2021-09-17 18:53:43' progress=1.000000 cache=0.0MiB(143txo) evodb_cache=0.0MiB
+2021-09-17 18:53:39 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:39 CSigningManager::ProcessMessageRecoveredSig -- signHash=8da1d99ac6c8209f39e818039892e181fee6ba0b9422c6ee94d09e2b62392c44, id=a4d856bb82768fecd0cf2bdaa7cc371cb6e9ff482e4cbffdfa6a0194e67b2150, msgHash=04547b57aa310e8231426ced388f4fd2783314cbc5a9ff1f8ce06aa862ab09da, node=1
+2021-09-17 18:53:39 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=12, nodes=1
+2021-09-17 18:53:39 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=8da1d99ac6c8209f39e818039892e181fee6ba0b9422c6ee94d09e2b62392c44, id=a4d856bb82768fecd0cf2bdaa7cc371cb6e9ff482e4cbffdfa6a0194e67b2150, msgHash=04547b57aa310e8231426ced388f4fd2783314cbc5a9ff1f8ce06aa862ab09da, node=1
+2021-09-17 18:53:44 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:44 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:44 UpdateTip: new best=09626dce37ca8f6587ed86271f4eab033998d1c59bcdf71a9306cbdfcc5f3531 height=625 version=0x20000020 log2_work=10.29001885 tx=695 date='2021-09-17 18:53:44' progress=1.000000 cache=0.0MiB(145txo) evodb_cache=0.0MiB
+2021-09-17 18:53:44 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:44 CSigningManager::ProcessMessageRecoveredSig -- signHash=ec3d41a92c308ae1ae17a3b7d28b2f17c107e7e5145736085aa076e84b008bfb, id=bcd33b4ae5df8d95ce4d100b20f85c302e724e5b5f04dd3d27a4522d4f6df401, msgHash=09626dce37ca8f6587ed86271f4eab033998d1c59bcdf71a9306cbdfcc5f3531, node=1
+2021-09-17 18:53:44 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=11, nodes=1
+2021-09-17 18:53:44 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=ec3d41a92c308ae1ae17a3b7d28b2f17c107e7e5145736085aa076e84b008bfb, id=bcd33b4ae5df8d95ce4d100b20f85c302e724e5b5f04dd3d27a4522d4f6df401, msgHash=09626dce37ca8f6587ed86271f4eab033998d1c59bcdf71a9306cbdfcc5f3531, node=1
+2021-09-17 18:53:49 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:49 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:49 UpdateTip: new best=515002c04f85be06d201ee714d26042e0b7066b144e5d10dbc26b5b895247084 height=626 version=0x20000020 log2_work=10.29232163 tx=696 date='2021-09-17 18:53:49' progress=1.000000 cache=0.0MiB(147txo) evodb_cache=0.0MiB
+2021-09-17 18:53:49 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:49 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=d0e8240c1f7e53e6abd28249712230275db6906b8d495cfd4f19dcaeda21aeba, id=56be1e55aed07da3bd2526fba33ca5ca557873ed7e4f0701040a5a742cdcd505, msgHash=515002c04f85be06d201ee714d26042e0b7066b144e5d10dbc26b5b895247084, node=-1
+2021-09-17 18:53:54 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:54 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:54 UpdateTip: new best=19466815ee412be53fe8b3bbe5f36f5265171be422332f8feadd469444677edf height=627 version=0x20000020 log2_work=10.29462075 tx=697 date='2021-09-17 18:53:54' progress=1.000000 cache=0.0MiB(149txo) evodb_cache=0.0MiB
+2021-09-17 18:53:54 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:54 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=c66db1221596bdc383c14c5dcf0478ab271383634313a23049ba23b0c47a67c5, id=282674775dcded97c3649a3e103563a8ec85a025ee9e3516490c01b07a45412e, msgHash=19466815ee412be53fe8b3bbe5f36f5265171be422332f8feadd469444677edf, node=-1
+2021-09-17 18:53:59 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:53:59 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:53:59 UpdateTip: new best=3213e21af0705c5f89dee3ebce965f1a3e1f81ba08f7040978b32e18a0ee3408 height=628 version=0x20000020 log2_work=10.29691621 tx=698 date='2021-09-17 18:53:59' progress=1.000000 cache=0.0MiB(151txo) evodb_cache=0.0MiB
+2021-09-17 18:53:59 ProcessNewBlock : ACCEPTED
+2021-09-17 18:53:59 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=49f13eea64d33931c540b38e9b47e1fc7456809a6cfc76dad79cec9edbd16340, id=48eac4095908224585d46123588d2d55b04c904bc40485f51e6fcdb6310e19f4, msgHash=3213e21af0705c5f89dee3ebce965f1a3e1f81ba08f7040978b32e18a0ee3408, node=-1
+2021-09-17 18:54:04 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:04 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:04 UpdateTip: new best=11dda17d72edc859d21dd88bb8d7bd9459ddc67c538c9083eef1332781b93e14 height=629 version=0x20000020 log2_work=10.29920802 tx=699 date='2021-09-17 18:54:04' progress=1.000000 cache=0.0MiB(153txo) evodb_cache=0.0MiB
+2021-09-17 18:54:04 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:04 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=441f35ad04790fc2b678886921062a4ba3e301f7aa102137bafbc7d3f364985e, id=4bba3fa21f932b874bf55be4bab08a9a7474c3a488f8d14823c49d621babb4b9, msgHash=11dda17d72edc859d21dd88bb8d7bd9459ddc67c538c9083eef1332781b93e14, node=-1
+2021-09-17 18:54:09 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:09 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:09 UpdateTip: new best=6266fccf2e2e9610003d627bca6f5b8f65d3161da73dbb4fd2cd6908715a9ac8 height=630 version=0x20000020 log2_work=10.30149619 tx=700 date='2021-09-17 18:54:09' progress=1.000000 cache=0.0MiB(155txo) evodb_cache=0.0MiB
+2021-09-17 18:54:09 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:09 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=7ca90ff425fee6f30b410a529f781c4ac84ced4105f18f489dd3e6cd3238138a, id=17bcacc5b0b45cecd840f9c5aaf838cc0e00f8de6343bdf04e18f29481062ee5, msgHash=6266fccf2e2e9610003d627bca6f5b8f65d3161da73dbb4fd2cd6908715a9ac8, node=-1
+2021-09-17 18:54:14 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:14 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:14 UpdateTip: new best=7a4bb911e07041788eb2c23bb012f2afe6f937f4f7f1f33e131096189e7afe25 height=631 version=0x20000020 log2_work=10.30378075 tx=701 date='2021-09-17 18:54:14' progress=1.000000 cache=0.0MiB(157txo) evodb_cache=0.0MiB
+2021-09-17 18:54:14 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:14 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=5bf9c4982b3e15970bf6bfaea2cc7896fb3fc097cf79fbe646977cc55bb9abf5, id=1fcb5183bcfccda20537eed2fd366e8458f88da3944a56f4b67eaefe4fbb58e0, msgHash=7a4bb911e07041788eb2c23bb012f2afe6f937f4f7f1f33e131096189e7afe25, node=-1
+2021-09-17 18:54:19 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:19 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:19 UpdateTip: new best=2ce004ded0c87de661b6a320562461714d3ef02833e3948a733049a95b65995d height=632 version=0x20000020 log2_work=10.30606169 tx=702 date='2021-09-17 18:54:19' progress=1.000000 cache=0.0MiB(159txo) evodb_cache=0.0MiB
+2021-09-17 18:54:19 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:19 CSigningManager::ProcessMessageRecoveredSig -- signHash=a028eb469879e649d27f47c80696c7ca47b17444bd4ed3be1c5691e2d0e703cc, id=abbfa4aa8b338c8f5a3a0e81ef6c0bf6a7e15c39b9a6e8db95ae624455d86c6a, msgHash=2ce004ded0c87de661b6a320562461714d3ef02833e3948a733049a95b65995d, node=1
+2021-09-17 18:54:19 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=a028eb469879e649d27f47c80696c7ca47b17444bd4ed3be1c5691e2d0e703cc, id=abbfa4aa8b338c8f5a3a0e81ef6c0bf6a7e15c39b9a6e8db95ae624455d86c6a, msgHash=2ce004ded0c87de661b6a320562461714d3ef02833e3948a733049a95b65995d, node=-1
+2021-09-17 18:54:24 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:24 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:24 UpdateTip: new best=788cfec8acebf553c62d3dc4e0427b4f2859fc953f5e99eb58877b269b11804d height=633 version=0x20000020 log2_work=10.30833903 tx=703 date='2021-09-17 18:54:24' progress=1.000000 cache=0.0MiB(161txo) evodb_cache=0.0MiB
+2021-09-17 18:54:24 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:24 CSigningManager::ProcessMessageRecoveredSig -- signHash=175ff4e69b6f76937d6b338c559ca86491240f1bf5f6d5a28e8735eff4224ed1, id=b3d5e782db4ff897604ca2e6be89bfd86ecabdbf3aa15026cb2d261c3dc90c1e, msgHash=788cfec8acebf553c62d3dc4e0427b4f2859fc953f5e99eb58877b269b11804d, node=1
+2021-09-17 18:54:24 CSigningManager::ProcessPendingRecoveredSigs -- verified recovered sig(s). count=1, vt=12, nodes=1
+2021-09-17 18:54:24 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=175ff4e69b6f76937d6b338c559ca86491240f1bf5f6d5a28e8735eff4224ed1, id=b3d5e782db4ff897604ca2e6be89bfd86ecabdbf3aa15026cb2d261c3dc90c1e, msgHash=788cfec8acebf553c62d3dc4e0427b4f2859fc953f5e99eb58877b269b11804d, node=1
+2021-09-17 18:54:27 connected to self at 172.32.62.4:60018, disconnecting
+2021-09-17 18:54:27 ThreadSocketHandler -- removing node: peer=13 addr=172.32.62.4:19899 nRefCount=1 fInbound=0 fMasternode=0
+2021-09-17 18:54:27 ThreadSocketHandler -- removing node: peer=14 addr=172.32.62.4:60018 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:54:29 ThreadSocketHandler -- removing node: peer=15 addr=172.32.62.2:38062 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:54:29 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:29 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:29 UpdateTip: new best=4a3b9b853c674b6937688789a0201a2bfa32d2e66da4e1506b6c4587985afa0e height=634 version=0x20000020 log2_work=10.31061278 tx=705 date='2021-09-17 18:54:29' progress=1.000000 cache=0.0MiB(163txo) evodb_cache=0.0MiB
+2021-09-17 18:54:29 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:29 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=50d9d6e5545d932fec3eddbcfe73fd6619a28e49582ea706e8ba80f3b0c3c0ff, id=df2e7e849fe64af0dd3ec73e100ace068713cbb8a0835dc73c31cc0f0fc3c7bc, msgHash=4a3b9b853c674b6937688789a0201a2bfa32d2e66da4e1506b6c4587985afa0e, node=-1
+2021-09-17 18:54:34 ThreadSocketHandler -- removing node: peer=16 addr=172.32.62.3:56028 nRefCount=1 fInbound=1 fMasternode=0
+2021-09-17 18:54:34 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:34 CQuorumBlockProcessor::ProcessCommitment -- processed commitment from block. type=100, quorumHash=04547b57aa310e8231426ced388f4fd2783314cbc5a9ff1f8ce06aa862ab09da, signers=3, validMembers=3, quorumPublicKey=09fdd422dc0c13494d0f5dc842da5b7a8e82f9e41f5d60b5cca64dcbbdbaf2a8b47bd8da088c8713c5903ac8c6993593
+2021-09-17 18:54:34 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:34 UpdateTip: new best=6e83682299fefcfc39d8de805d81b3ddad8ce2406b474d5544ea5fd7eb4d7a0b height=635 version=0x20000020 log2_work=10.31288296 tx=707 date='2021-09-17 18:54:34' progress=1.000000 cache=0.0MiB(165txo) evodb_cache=0.0MiB
+2021-09-17 18:54:34 CQuorumManager::BuildQuorumContributions -- built quorum vvec and skShare. time=0
+2021-09-17 18:54:34 CQuorum::StartCachePopulatorThread -- start
+2021-09-17 18:54:34 RenameThread: thread new name dash-q-cachepop
+2021-09-17 18:54:34 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:34 CQuorum::StartCachePopulatorThread -- done. time=6
+2021-09-17 18:54:34 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=251f6b1117de10b6577241d297d46252e2aa9cc50baaae2c602dace5e6834a0e, id=6e889db37500eed5889d0f322e841d1b75b563d31ae5eed1f7fd9baac71bb2c9, msgHash=6e83682299fefcfc39d8de805d81b3ddad8ce2406b474d5544ea5fd7eb4d7a0b, node=-1
+2021-09-17 18:54:39 ConnectBlock(DASH): spork is off, skipping transaction locking checks
+2021-09-17 18:54:39 CGovernanceManager::UpdateCachesAndClean -- Governance Objects: 0 (Proposals: 0, Triggers: 0, Other: 0; Erased: 0), Votes: 0
+2021-09-17 18:54:39 UpdateTip: new best=7244b15fd939ef272016c9614c1ae0fa9ad4b2e13dba8927de451ba279fe3b5d height=636 version=0x20000020 log2_work=10.31514956 tx=708 date='2021-09-17 18:54:39' progress=1.000000 cache=0.0MiB(167txo) evodb_cache=0.0MiB
+2021-09-17 18:54:39 ProcessNewBlock : ACCEPTED
+2021-09-17 18:54:39 CSigningManager::ProcessRecoveredSig -- valid recSig. signHash=9f7c8c67a96cf0fccaa63045e3cbfdb469cc7a98ef7687c0358ba97e4b989168, id=921eef8f1129450c7250d123925fd4b2679fcdf3837572e799f2e5234f1a0d09, msgHash=7244b15fd939ef272016c9614c1ae0fa9ad4b2e13dba8927de451ba279fe3b5d, node=-1

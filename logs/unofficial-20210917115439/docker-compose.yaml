@@ -5,8 +5,6 @@ services:
     container_name: thornode1
     hostname: thornode1
     image: github.com/alexdcox/thornode:mocknet
-    depends_on:
-      - bitcoincash1
     restart: unless-stopped
     ports:
       - 1317:1317
@@ -40,8 +38,6 @@ services:
     container_name: bifrost1
     hostname: bifrost1
     image: github.com/alexdcox/thornode:mocknet
-    depends_on:
-      - bitcoincash1
     restart: unless-stopped
     environment:
       PEER: thornode1
@@ -75,8 +71,6 @@ services:
   thornode2:
     container_name: thornode2
     hostname: thornode2
-    depends_on:
-      - bitcoincash1
     image: github.com/alexdcox/thornode:mocknet
     restart: unless-stopped
     environment:
@@ -105,8 +99,6 @@ services:
     container_name: bifrost2
     hostname: bifrost2
     image: github.com/alexdcox/thornode:mocknet
-    depends_on:
-      - bitcoincash1
     restart: unless-stopped
     environment:
       PEER: thornode2
@@ -208,8 +200,6 @@ services:
   bitcoincash1:
     container_name: bitcoincash1
     hostname: bitcoincash1
-    depends_on:
-      - dash1
     restart: unless-stopped
     ports:
       - 28443:28443
@@ -226,8 +216,6 @@ services:
   bitcoincash2:
     container_name: bitcoincash2
     hostname: bitcoincash2
-    depends_on:
-      - dash1
     restart: unless-stopped
     image: registry.gitlab.com/thorchain/devops/bitcoin-cash:23.0.0
     environment:
@@ -243,8 +231,6 @@ services:
     container_name: midgard
     hostname: midgard
     image: registry.gitlab.com/thorchain/midgard:develop
-    depends_on:
-      - thornode1
     restart: unless-stopped
     environment:
       MIDGARD_THORCHAIN_THOR_NODE_URL: http://thornode1:1317/thorchain
@@ -266,8 +252,6 @@ services:
     hostname: midgard-db
     restart: unless-stopped
     image: timescale/timescaledb:2.2.0-pg13
-    depends_on:
-      - thornode1
     environment:
       - POSTGRES_USER=midgard
       - POSTGRES_PASSWORD=password

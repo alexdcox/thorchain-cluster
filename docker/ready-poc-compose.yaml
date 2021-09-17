@@ -1,0 +1,70 @@
+version: '3'
+
+services:
+  orchestrator:
+    container_name: orchestrator
+    hostname: orchestrator
+    image: ubuntuwithsocat
+    networks:
+      - poc
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/ready-poc-server.sh
+
+  dash:
+    container_name: dash
+    hostname: dash
+    image: ubuntuwithsocat
+    networks:
+      - poc
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/ready-poc-client.sh
+    environment:
+      - ORCHESTRATOR=orchestrator
+      - READY_AFTER=4
+
+  bch:
+    container_name: bch
+    hostname: bch
+    image: ubuntuwithsocat
+    networks:
+      - poc
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/ready-poc-client.sh
+    environment:
+      - ORCHESTRATOR=orchestrator
+      - READY_AFTER=4
+      - TARGET=dash
+
+  thorchain:
+    container_name: thorchain
+    hostname: thorchain
+    image: ubuntuwithsocat
+    networks:
+      - poc
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/ready-poc-client.sh
+    environment:
+      - ORCHESTRATOR=orchestrator
+      - READY_AFTER=4
+      - TARGET=bch
+
+  midgard:
+    container_name: midgard
+    hostname: midgard
+    image: ubuntuwithsocat
+    networks:
+      - poc
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/ready-poc-client.sh
+    environment:
+      - ORCHESTRATOR=orchestrator
+      - READY_AFTER=4
+      - TARGET=thorchain
+
+networks:
+  poc:

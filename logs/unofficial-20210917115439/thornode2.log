@@ -1,0 +1,592 @@
+Checking if THORNode Thor 'thorchain' account exists
+Creating THORNode Thor 'thorchain' account
+
+- name: thorchain
+  type: local
+  address: tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy
+  pubkey: tthorpub1addwnpepq2g0zq25vw3d65qua24hm96a5ah5wn5vs3rzvdawmaup6e2v3p775y53g5k
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+
+{"app_message":{"auth":{"accounts":[],"params":{"max_memo_characters":"256","sig_verify_cost_ed25519":"590","sig_verify_cost_secp256k1":"1000","tx_sig_limit":"7","tx_size_cost_per_byte":"10"}},"bank":{"balances":[],"denom_metadata":[],"params":{"default_send_enabled":true,"send_enabled":[]},"supply":[]},"capability":{"index":"1","owners":[]},"genutil":{"gen_txs":[]},"ibc":{"channel_genesis":{"ack_sequences":[],"acknowledgements":[],"channels":[],"commitments":[],"next_channel_sequence":"0","receipts":[],"recv_sequences":[],"send_sequences":[]},"client_genesis":{"clients":[],"clients_consensus":[],"clients_metadata":[],"create_localhost":false,"next_client_sequence":"0","params":{"allowed_clients":["06-solomachine","07-tendermint"]}},"connection_genesis":{"client_connection_paths":[],"connections":[],"next_connection_sequence":"0"}},"mint":{"minter":{"annual_provisions":"0.000000000000000000","inflation":"0.130000000000000000"},"params":{"blocks_per_year":"6311520","goal_bonded":"0.670000000000000000","inflation_max":"0.200000000000000000","inflation_min":"0.070000000000000000","inflation_rate_change":"0.130000000000000000","mint_denom":"stake"}},"params":null,"thorchain":{},"transfer":{"denom_traces":[],"params":{"receive_enabled":true,"send_enabled":true},"port_id":"transfer"},"upgrade":{}},"chain_id":"thorchain","gentxs_dir":"","moniker":"local","node_id":"321df72f7de433584ab5813ec4b2f69d4b019c29"}
+External ip resolved to '172.32.60.2'
+Waiting for thornode1 setup port to open...
+Sending 'setup' startup command to node thornode1...
+setup tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy tthorpub1addwnpepq2g0zq25vw3d65qua24hm96a5ah5wn5vs3rzvdawmaup6e2v3p775y53g5k tthorcpub1zcjduepqm87vy6da63rkmptnxvry35tagujteu3g5jejwdmq9hqjrrlmhytqdlw2av tthorpub1zcjduepqjslcj02cad33fz9ha44qletvvrmkrff9p8dqstq0g8kf9wgl4vuqy4eafk 0.67.0 172.32.60.2
+2021/09/17 18:51:59 socat[99] E connect(5, AF=2 172.32.60.1:5060, 16): Connection refused
+aggainn
+Sending 'ready' startup command to node thornode1...
+ready tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy
+2021/09/17 18:52:00 socat[105] E connect(5, AF=2 172.32.60.1:5060, 16): Connection refused
+aggainn
+Fetching genesis
+File at /root/.thornode/config/genesis.json is a valid genesis file
+{
+  "genesis_time": "2021-09-17T18:51:58.3730729Z",
+  "chain_id": "thorchain",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000",
+      "max_bytes": "1048576"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    },
+    "version": {}
+  },
+  "app_hash": "",
+  "app_state": {
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "tthor1z63f3mzwv3g75az80xwmhrawdqcjpaekk0kd54",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "tthor1wz78qmrkplrdhy37tw0tnvn0tkm5pqd6zdp257",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "tthor1xwusttz86hqfuk5z7amcgqsg7vp6g8zhsp5lu2",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "tthor1xfkj2ukuvmwgrdlv74cu6v2ungs0ls69km7x6n",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "tthor1zzja0wl7etldc4caprkfjwd74k68qqvfl32tj5",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      ]
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": false
+      },
+      "balances": [
+        {
+          "address": "tthor1zzja0wl7etldc4caprkfjwd74k68qqvfl32tj5",
+          "coins": [
+            {
+              "denom": "rune",
+              "amount": "1000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "tthor1z63f3mzwv3g75az80xwmhrawdqcjpaekk0kd54",
+          "coins": [
+            {
+              "denom": "rune",
+              "amount": "5000000000000"
+            }
+          ]
+        },
+        {
+          "address": "tthor1xfkj2ukuvmwgrdlv74cu6v2ungs0ls69km7x6n",
+          "coins": [
+            {
+              "denom": "rune",
+              "amount": "5090000000000"
+            }
+          ]
+        },
+        {
+          "address": "tthor1xwusttz86hqfuk5z7amcgqsg7vp6g8zhsp5lu2",
+          "coins": [
+            {
+              "denom": "rune",
+              "amount": "5090000000000"
+            }
+          ]
+        },
+        {
+          "address": "tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy",
+          "coins": [
+            {
+              "denom": "rune",
+              "amount": "1000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "tthor1wz78qmrkplrdhy37tw0tnvn0tkm5pqd6zdp257",
+          "coins": [
+            {
+              "denom": "rune",
+              "amount": "25000000000100"
+            }
+          ]
+        }
+      ],
+      "supply": [],
+      "denom_metadata": []
+    },
+    "capability": {
+      "index": "1",
+      "owners": []
+    },
+    "genutil": {
+      "gen_txs": []
+    },
+    "ibc": {
+      "client_genesis": {
+        "clients": [],
+        "clients_consensus": [],
+        "clients_metadata": [],
+        "params": {
+          "allowed_clients": [
+            "06-solomachine",
+            "07-tendermint"
+          ]
+        },
+        "create_localhost": false,
+        "next_client_sequence": "0"
+      },
+      "connection_genesis": {
+        "connections": [],
+        "client_connection_paths": [],
+        "next_connection_sequence": "0"
+      },
+      "channel_genesis": {
+        "channels": [],
+        "acknowledgements": [],
+        "commitments": [],
+        "receipts": [],
+        "send_sequences": [],
+        "recv_sequences": [],
+        "ack_sequences": [],
+        "next_channel_sequence": "0"
+      }
+    },
+    "mint": {
+      "minter": {
+        "inflation": "0.130000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "stake",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "params": null,
+    "thorchain": {
+      "node_accounts": [
+        {
+          "node_address": "tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy",
+          "version": "0.67.0",
+          "ip_address": "172.32.60.2",
+          "status": "Active",
+          "active_block_height": "0",
+          "bond_address": "tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy",
+          "signer_membership": [],
+          "validator_cons_pub_key": "tthorcpub1zcjduepqm87vy6da63rkmptnxvry35tagujteu3g5jejwdmq9hqjrrlmhytqdlw2av",
+          "pub_key_set": {
+            "secp256k1": "tthorpub1addwnpepq2g0zq25vw3d65qua24hm96a5ah5wn5vs3rzvdawmaup6e2v3p775y53g5k",
+            "ed25519": "tthorpub1zcjduepqjslcj02cad33fz9ha44qletvvrmkrff9p8dqstq0g8kf9wgl4vuqy4eafk"
+          }
+        },
+        {
+          "node_address": "tthor1zzja0wl7etldc4caprkfjwd74k68qqvfl32tj5",
+          "version": "0.67.0",
+          "ip_address": "172.32.60.1",
+          "status": "Active",
+          "active_block_height": "0",
+          "bond_address": "tthor1zzja0wl7etldc4caprkfjwd74k68qqvfl32tj5",
+          "signer_membership": [],
+          "validator_cons_pub_key": "tthorcpub1zcjduepqg3ws2qh3zrgq9qvcz5fdv5eckkpk3z7ntqmrtehmafdqmp84rs7qecu9ry",
+          "pub_key_set": {
+            "secp256k1": "tthorpub1addwnpepqvcndn85kpt9aqmw42uqq58hdfkr0xac2qydsqfvsszzydg7086cwj988pt",
+            "ed25519": "tthorpub1zcjduepq6qzddzcreavlrfff2p8rxfzc0jnsfp0a4jcgntlnnqnq2dxf7tas7ytpuk"
+          }
+        }
+      ],
+      "reserve": "22000000000000000",
+      "vaults": [
+        {
+          "block_height": "0",
+          "pub_key": "tthorpub1addwnpepqvcndn85kpt9aqmw42uqq58hdfkr0xac2qydsqfvsszzydg7086cwj988pt",
+          "chains": [
+            "THOR",
+            "DASH",
+            "BCH"
+          ],
+          "coins": [],
+          "type": "AsgardVault",
+          "status": "ActiveVault",
+          "status_since": "0",
+          "membership": [
+            "tthorpub1addwnpepq2g0zq25vw3d65qua24hm96a5ah5wn5vs3rzvdawmaup6e2v3p775y53g5k",
+            "tthorpub1addwnpepqvcndn85kpt9aqmw42uqq58hdfkr0xac2qydsqfvsszzydg7086cwj988pt"
+          ]
+        }
+      ],
+      "pools": [
+        {
+          "balance_rune": "3757872062993",
+          "balance_asset": "23539136827",
+          "asset": "BCH.BCH",
+          "status": "Available"
+        },
+        {
+          "balance_rune": "1000000000000",
+          "balance_asset": "33333333333",
+          "asset": "DASH.DASH",
+          "status": "Available"
+        }
+      ]
+    },
+    "transfer": {
+      "port_id": "transfer",
+      "denom_traces": [],
+      "params": {
+        "send_enabled": false,
+        "receive_enabled": true
+      }
+    },
+    "upgrade": {}
+  }
+}
+Using peer 'thornode1' with nodeId 486819b13ea2f941eaa883dfe7fcf00e07800722
+Waiting for this things to get up and running...
+waiting...
+{"level":"info","time":"2021-09-17T18:52:07Z","message":"starting ABCI with Tendermint"}
+{"level":"info","module":"proxy","impl":"multiAppConn","time":"2021-09-17T18:52:07Z","message":"Starting multiAppConn service"}
+{"level":"info","module":"proxy","connection":"query","module":"abci-client","impl":"localClient","time":"2021-09-17T18:52:07Z","message":"Starting localClient service"}
+{"level":"info","module":"proxy","connection":"snapshot","module":"abci-client","impl":"localClient","time":"2021-09-17T18:52:07Z","message":"Starting localClient service"}
+{"level":"info","module":"proxy","connection":"mempool","module":"abci-client","impl":"localClient","time":"2021-09-17T18:52:07Z","message":"Starting localClient service"}
+{"level":"info","module":"proxy","connection":"consensus","module":"abci-client","impl":"localClient","time":"2021-09-17T18:52:07Z","message":"Starting localClient service"}
+{"level":"info","module":"events","impl":"EventBus","time":"2021-09-17T18:52:07Z","message":"Starting EventBus service"}
+{"level":"info","module":"events","module":"pubsub","impl":"PubSub","time":"2021-09-17T18:52:07Z","message":"Starting PubSub service"}
+{"level":"info","module":"x/bank","amount":"22000000000000000rune","from":"thorchain","time":"2021-09-17T18:52:07Z","message":"minted coins from module account"}
+{"level":"info","module":"x/bank","amount":"100000000000thor.mimir","from":"thorchain","time":"2021-09-17T18:52:07Z","message":"minted coins from module account"}
+{"level":"info","module":"x/bank","amount":"100000000000thor.mimir","from":"thorchain","time":"2021-09-17T18:52:07Z","message":"minted coins from module account"}
+{"level":"info","module":"x/bank","amount":"100000000000thor.mimir","from":"thorchain","time":"2021-09-17T18:52:07Z","message":"minted coins from module account"}
+{"level":"info","module":"x/bank","amount":"100000000000thor.mimir","from":"thorchain","time":"2021-09-17T18:52:07Z","message":"minted coins from module account"}
+{"level":"info","address":"tthor1dheycdevq39qlkxs2a6wuuzyn4aqxhve3hhmlw","time":"2021-09-17T18:52:07Z","message":"Reserve Module"}
+{"level":"info","address":"tthor17gw75axcnr8747pkanye45pnrwk7p9c3uhzgff","time":"2021-09-17T18:52:07Z","message":"Bond    Module"}
+{"level":"info","address":"tthor1g98cy3n9mmjrpn0sxmn63lztelera37nrytwp2","time":"2021-09-17T18:52:07Z","message":"Asgard  Module"}
+{"level":"info","module":"x/capability","module":"ibc","name":"ports/transfer","time":"2021-09-17T18:52:07Z","message":"created new capability"}
+{"level":"info","module":"x/ibc/port","port":"transfer","time":"2021-09-17T18:52:07Z","message":"port binded"}
+{"level":"info","module":"x/capability","capability":1,"module":"transfer","name":"ports/transfer","time":"2021-09-17T18:52:07Z","message":"claimed capability"}
+{"level":"info","block":11,"p2p":8,"software":"","time":"2021-09-17T18:52:07Z","message":"Version info"}
+{"level":"debug","time":"2021-09-17T18:52:07Z","message":"initialization: tmNode created"}
+{"level":"info","impl":"Node","time":"2021-09-17T18:52:07Z","message":"Starting Node service"}
+{"level":"info","laddr":"localhost:6060","time":"2021-09-17T18:52:07Z","message":"Starting pprof server"}
+{"level":"info","module":"statesync","impl":"StateSync","time":"2021-09-17T18:52:07Z","message":"Starting StateSync service"}
+{"level":"info","module":"blockchain","impl":"BlockchainReactor","time":"2021-09-17T18:52:07Z","message":"Starting BlockchainReactor service"}
+{"level":"info","module":"blockchain","impl":"BlockPool","time":"2021-09-17T18:52:07Z","message":"Starting BlockPool service"}
+{"level":"debug","time":"2021-09-17T18:52:07Z","message":"initialization: tmNode started"}
+Waiting for 'thornode2' to reach next block after '0'...
+sh: null: out of range
+{"level":"debug","module":"blockchain","inbound":0,"numPending":0,"outbound":0,"total":0,"time":"2021-09-17T18:52:08Z","message":"Consensus ticker"}
+{"level":"debug","module":"blockchain","time":"2021-09-17T18:52:08Z","message":"Blockpool has no peers"}
+{"level":"error","error":"validator manager is not available","time":"2021-09-17T18:52:09Z","message":"fail to get node preflight result"}
+sh: null: out of range
+{"level":"debug","module":"blockchain","inbound":0,"numPending":0,"outbound":0,"total":0,"time":"2021-09-17T18:52:09Z","message":"Consensus ticker"}
+{"level":"debug","module":"blockchain","time":"2021-09-17T18:52:09Z","message":"Blockpool has no peers"}
+{"level":"debug","module":"blockchain","chID":64,"msg":{},"src":{"Logger":{"ExcludeModules":["mempool","consensus","txindex","evidence","rpc-server","api-server","p2p","pex","rpc"]},"Data":{}},"time":"2021-09-17T18:52:10Z","message":"Receive"}
+{"level":"debug","module":"blockchain","inbound":0,"numPending":0,"outbound":1,"total":0,"time":"2021-09-17T18:52:10Z","message":"Consensus ticker"}
+{"level":"info","module":"blockchain","height":1,"time":"2021-09-17T18:52:10Z","message":"Time to switch to consensus reactor!"}
+{"level":"info","module":"blockchain","impl":{"Logger":{"ExcludeModules":["mempool","consensus","txindex","evidence","rpc-server","api-server","p2p","pex","rpc"]}},"time":"2021-09-17T18:52:10Z","message":"Stopping BlockPool service"}
+sh: null: out of range
+sh: null: out of range
+sh: null: out of range
+{"level":"debug","height":1,"time":"2021-09-17T18:52:13Z","message":"Begin Block"}
+{"level":"info","version":39,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":40,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":41,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":42,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"error","error":"vault with pubkey(tthorpub1addwnpepqfrsx4rcnch7m3qd6n6g6y0mmuujjxpjy3nlts2kpzn5cazc5xmtxf54f3p) doesn't exist: vault not found","time":"2021-09-17T18:52:13Z","message":"fail to retrieve vault"}
+{"level":"error","error":"vault with pubkey(tthorpub1addwnpepqtgv8rnpv4nkevjcagmr9ky6v0kasj9h0gzvr4gfk2magqprvl37jnlzv9u) doesn't exist: vault not found","time":"2021-09-17T18:52:13Z","message":"fail to retrieve vault"}
+{"level":"error","error":"vault with pubkey(tthorpub1addwnpepqv3eslzyykkqzrf2zz5yp7pfepur2tyrvsvhd2lu72egdejpuezgcjyzfgp) doesn't exist: vault not found","time":"2021-09-17T18:52:13Z","message":"fail to retrieve vault"}
+{"level":"info","version":43,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":44,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":45,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":46,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"error","error":"vault with pubkey(tthorpub1addwnpepqdnujur3husklhltj3l0kmmsepn0u68sge0jxg5k550nvdpphxm9s0v7f3v) doesn't exist: vault not found","time":"2021-09-17T18:52:13Z","message":"fail to retrieve vault"}
+{"level":"info","version":47,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":48,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":49,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":50,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":51,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":52,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":53,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":54,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":55,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"error","error":"cannot save a pool with an empty asset","time":"2021-09-17T18:52:13Z","message":"fail to save pool"}
+{"level":"info","version":56,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"error","rune in module":0,"rune in pools":4757872062993,"time":"2021-09-17T18:52:13Z","message":"cannot migrate with a zero amount"}
+{"level":"info","version":57,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":58,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"error","error":"vault with pubkey(tthorpub1addwnpepqg65km6vfflrlymsjhrnmn4w58d2d36h977pcu3aqp6dxee2yf88yg0z3v4) doesn't exist: vault not found","pubKey":"tthorpub1addwnpepqg65km6vfflrlymsjhrnmn4w58d2d36h977pcu3aqp6dxee2yf88yg0z3v4","time":"2021-09-17T18:52:13Z","message":"fail to get vault"}
+{"level":"error","chain":"ETH","error":"transaction size can't be negative","time":"2021-09-17T18:52:13Z","message":"network fee is invalid"}
+{"level":"error","chain":"ETH","error":"transaction size can't be negative","time":"2021-09-17T18:52:13Z","message":"network fee is invalid"}
+{"level":"error","error":"fail to prepare outbound tx: insufficient funds for outbound request: 0x340b94e5369cEDe551a117960c75547eA84eAEdE 60000000 ETH.MKR-0X9F8F72AA9304C8B593D555F12EF6589CC3A579A2 remaining","time":"2021-09-17T18:52:13Z","message":"fail to schedule refund MKR transaction"}
+{"level":"info","version":59,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":60,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","asset":"ETH.AAVE-0X7FC66500C84A76AD7E9C93437BFC5AC33E2DDAE9","time":"2021-09-17T18:52:13Z","message":"pool balance rune is 0 , skip it"}
+{"level":"info","asset":"ETH.HEGIC-0X584BC13C7D411C00C01A62E8019472DE68768430","time":"2021-09-17T18:52:13Z","message":"pool balance rune is 0 , skip it"}
+{"level":"info","asset":"ETH.YFI-0X0BC529C00C6401AEF6D220BE8C6EA1667F6AD93E","time":"2021-09-17T18:52:13Z","message":"pool balance rune is 0 , skip it"}
+{"level":"info","asset":"ETH.SUSHI-0X6B3595068778DD592E39A122F4F5A5CF09C90FE2","time":"2021-09-17T18:52:13Z","message":"pool balance rune is 0 , skip it"}
+{"level":"info","asset":"ETH.KYL-0X67B6D479C7BB412C54E03DCA8E1BC6740CE6B99C","time":"2021-09-17T18:52:13Z","message":"pool balance rune is 0 , skip it"}
+{"level":"info","asset":"ETH.DODO-0X43DFC4159D86F3A37A5A4B3D4580B888AD7D4DDD","time":"2021-09-17T18:52:13Z","message":"pool balance rune is 0 , skip it"}
+{"level":"error","error":"cannot save a pool with an empty asset","time":"2021-09-17T18:52:13Z","message":"fail to save ETH pool"}
+{"level":"info","version":61,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":62,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"error","error":"thorpub1addwnpepqdr4386mnkqyqzpqlydtat0k82f8xvkfwzh4xtjc84cuaqmwx5vjvgnf6v5 is not bech32 encoded pub key,err : invalid Bech32 prefix; expected tthorpub, got thorpub","time":"2021-09-17T18:52:13Z","message":"fail to parse pub key"}
+{"level":"info","version":63,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":64,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":65,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":66,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"info","version":67,"time":"2021-09-17T18:52:13Z","message":"Migrating store to new version"}
+{"level":"debug","height":1,"time":"2021-09-17T18:52:13Z","message":"End Block"}
+{"level":"info","time":"2021-09-17T18:52:13Z","message":"already have vault, no need to generate at genesis"}
+{"level":"info","module":"state","height":1,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:52:13Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B31312033372034382032333120323030203430203230322031373720333320313530203135332031333620313835203133392035342031313120313120313131203138203730203133203134302032342032333120313539203138352031363620393820383120313120313032203235345D3A317D","time":"2021-09-17T18:52:13Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"0B2530E7C828CAB121969988B98B366F0B6F12460D8C18E79FB9A662510B66FE","height":1,"num_txs":0,"time":"2021-09-17T18:52:13Z","message":"committed state"}
+Sending node deposit bond transaction...
+{"level":"debug","height":2,"time":"2021-09-17T18:52:19Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:19Z","message":"No store migration needed"}
+{"level":"info","address":"172.32.60.1","time":"2021-09-17T18:52:19Z","message":"receive ip address"}
+{"level":"error","error":"not enough bond: unauthorized","time":"2021-09-17T18:52:19Z","message":"msg set version failed validation"}
+{"level":"debug","module":"state","code":4,"log":"failed to execute message; message index: 0: not enough bond: unauthorized","time":"2021-09-17T18:52:19Z","message":"invalid tx"}
+{"level":"debug","height":2,"time":"2021-09-17T18:52:19Z","message":"End Block"}
+{"level":"info","module":"state","height":2,"num_invalid_txs":1,"num_valid_txs":0,"time":"2021-09-17T18:52:19Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B313335203134342032303920333620363520323220323237203834203830203839203134332031343820333920363120313937203138342031313220313735203636203136342032333020323330203133302032343920313938203339203633203931203634203736203137312033315D3A327D","time":"2021-09-17T18:52:20Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"8790D1244116E35450598F94273DC5B870AF42A4E6E682F9C6273F5B404CAB1F","height":2,"num_txs":1,"time":"2021-09-17T18:52:20Z","message":"committed state"}
+{"level":"error","module":"rpc","err":"timed out waiting for tx to be included in a block","time":"2021-09-17T18:52:24Z","message":"Error on broadcastTxCommit"}
+Error: RPC error -32603 - Internal error: timed out waiting for tx to be included in a block
+Usage:
+  THORChain tx thorchain deposit [amount] [coin] [memo] [flags]
+
+Flags:
+  -a, --account-number uint      The account number of the signing account (offline mode only)
+  -b, --broadcast-mode string    Transaction broadcasting mode (sync|async|block) (default "sync")
+      --dry-run                  ignore the --gas flag and perform a simulation of a transaction, but don't broadcast it
+      --fees string              Fees to pay along with transaction; eg: 10uatom
+      --from string              Name or address of private key with which to sign
+      --gas string               gas limit to set per-transaction; set to "auto" to calculate sufficient gas automatically (default 200000)
+      --gas-adjustment float     adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
+      --gas-prices string        Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)
+      --generate-only            Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible)
+  -h, --help                     help for deposit
+      --keyring-backend string   Select keyring's backend (os|file|kwallet|pass|test) (default "os")
+      --keyring-dir string       The client Keyring directory; if omitted, the default 'home' directory will be used
+      --ledger                   Use a connected Ledger device
+      --memo string              Memo to send along with transaction
+      --node string              <host>:<port> to tendermint rpc interface for this chain (default "tcp://localhost:26657")
+      --offline                  Offline mode (does not allow any online functionality
+  -s, --sequence uint            The sequence number of the signing account (offline mode only)
+      --sign-mode string         Choose sign mode (direct|amino-json), this is an advanced feature
+      --timeout-height uint      Set a block timeout height to prevent the tx from being committed past a certain height
+  -y, --yes                      Skip tx broadcasting prompt confirmation
+
+Global Flags:
+      --chain-id string     The network chain ID
+      --home string         directory for config and data (default "/root/.thornode")
+      --log_format string   The logging format (json|plain) (default "plain")
+      --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
+      --trace               print out full stack trace on errors
+
+Setting node ip address...
+{"height":"0","txhash":"D49CF4EB32B2B68D22ECAC1F4DDE5DD0D5E76B9EBEFA5A2E204D4C21E1A68596","codespace":"sdk","code":32,"data":"","raw_log":"account sequence mismatch, expected 1, got 0: incorrect account sequence","logs":[],"info":"","gas_wanted":"200000","gas_used":"29338","tx":null,"timestamp":""}
+Setting node version...
+{"level":"debug","height":3,"time":"2021-09-17T18:52:24Z","message":"Begin Block"}
+{"height":"0","txhash":"58708A3E32BAD8274C36A8E4C57832ECDECE466EE16F31DFAE62005840700AB6","codespace":"sdk","code":32,"data":"","raw_log":"account sequence mismatch, expected 1, got 0: incorrect account sequence","logs":[],"info":"","gas_wanted":"200000","gas_used":"29268","tx":null,"timestamp":""}
+{"level":"debug","time":"2021-09-17T18:52:24Z","message":"No store migration needed"}
+{"level":"info","coins":[{"asset":"THOR.RUNE","amount":"120000000"}],"from":"tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy","memo":"bond:tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy","time":"2021-09-17T18:52:24Z","message":"receive MsgDeposit"}
+{"level":"info","bond":"120000000","node address":"tthor12ny5ka0aduj4kkeg2yp8m8u87cfcy8k2x5uqcy","request hash":"24FA0DD8D4C3A582480BAF564C5E71ED09EB08C2C6775B9AD529DDF1153C8F78","time":"2021-09-17T18:52:24Z","message":"receive MsgBond"}
+{"level":"info","version":"0.67.0","time":"2021-09-17T18:52:24Z","message":"receive version number"}
+{"level":"error","error":"not enough bond: unauthorized","time":"2021-09-17T18:52:24Z","message":"msg set version failed validation"}
+{"level":"debug","module":"state","code":4,"log":"failed to execute message; message index: 0: not enough bond: unauthorized","time":"2021-09-17T18:52:24Z","message":"invalid tx"}
+{"level":"debug","height":3,"time":"2021-09-17T18:52:24Z","message":"End Block"}
+{"level":"info","module":"state","height":3,"num_invalid_txs":1,"num_valid_txs":1,"time":"2021-09-17T18:52:25Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B3135352031323420313136203431203233342031353720313034203233352036302031343020373920333620353220363320313337203132322032313520363520383220313920313335203132352033342037372039203138302032353220313536203535203738203232352034355D3A337D","time":"2021-09-17T18:52:25Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"9B7C7429EA9D68EB3C8C4F24343F897AD7415213877D224D09B4FC9C374EE12D","height":3,"num_txs":2,"time":"2021-09-17T18:52:25Z","message":"committed state"}
+{"level":"debug","height":4,"time":"2021-09-17T18:52:31Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:31Z","message":"No store migration needed"}
+{"level":"debug","height":4,"time":"2021-09-17T18:52:31Z","message":"End Block"}
+{"level":"info","module":"state","height":4,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:52:31Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B3231332031373920313820373020313137203634203134203439203231372032323320313332203431203134342032313720313220313231203234352031313820313737203233372036372031353920313236203139322031353320313731203136342032323420313238203530203133372034385D3A347D","time":"2021-09-17T18:52:31Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"D5B3124675400E31D9DF842990D90C79F576B1ED439F7EC099ABA4E080328930","height":4,"num_txs":0,"time":"2021-09-17T18:52:31Z","message":"committed state"}
+{"level":"debug","height":5,"time":"2021-09-17T18:52:36Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:36Z","message":"No store migration needed"}
+{"level":"debug","height":5,"time":"2021-09-17T18:52:36Z","message":"End Block"}
+{"level":"info","module":"state","height":5,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:52:36Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B353620323220313338203937203232332034312031393420313130203130392032323020333920313620323233203231362032303920323331203233352031363120323136203134342032303820323235203935203838203534203230342032332036322032303120353720313939203134345D3A357D","time":"2021-09-17T18:52:36Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"38168A61DF29C26E6DDC2710DFD8D1E7EBA1D890D0E15F5836CC173EC939C790","height":5,"num_txs":0,"time":"2021-09-17T18:52:36Z","message":"committed state"}
+{"level":"debug","height":6,"time":"2021-09-17T18:52:42Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:42Z","message":"No store migration needed"}
+{"level":"debug","height":6,"time":"2021-09-17T18:52:42Z","message":"End Block"}
+{"level":"info","module":"state","height":6,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:52:43Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B392037352031333220393420343720343120333920323434203339203232362031352031343020363820323131203736203231362032203736203232342031393920313536203232352033312034372032313220323437203136342033382032372037372034362032335D3A367D","time":"2021-09-17T18:52:43Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"094B845E2F2927F427E20F8C44D34CD8024CE0C79CE11F2FD4F7A4261B4D2E17","height":6,"num_txs":0,"time":"2021-09-17T18:52:43Z","message":"committed state"}
+{"level":"debug","height":7,"time":"2021-09-17T18:52:47Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:47Z","message":"No store migration needed"}
+{"level":"info","chain":"DASH","fee-rate":1,"transaction-size":1500,"time":"2021-09-17T18:52:47Z","message":"update network fee"}
+{"level":"debug","height":7,"time":"2021-09-17T18:52:47Z","message":"End Block"}
+{"level":"info","module":"state","height":7,"num_invalid_txs":0,"num_valid_txs":2,"time":"2021-09-17T18:52:48Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B313132203231362031373320393720313631203133312035382031332033302031373920313032203235203231302032313820353520332031333220373920353020323236203638203134382031302037332031323720343320332032323220313239203232322031203138385D3A377D","time":"2021-09-17T18:52:48Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"70D8AD61A1833A0D1EB36619D2DA3703844F32E244940A497F2B03DE81DE01BC","height":7,"num_txs":2,"time":"2021-09-17T18:52:48Z","message":"committed state"}
+{"level":"debug","height":8,"time":"2021-09-17T18:52:54Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:54Z","message":"No store migration needed"}
+{"level":"debug","height":8,"time":"2021-09-17T18:52:54Z","message":"End Block"}
+{"level":"info","module":"state","height":8,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:52:54Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B3830203132392032313620313638203230203235352031203234322031313120323530203933203133332039372035342038342038322036352031373020323220313137203320332038302032333120343620363820333620343320313033203131302038352037385D3A387D","time":"2021-09-17T18:52:54Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"5081D8A814FF01F26FFA5D856136545241AA1675030350E72E44242B676E554E","height":8,"num_txs":0,"time":"2021-09-17T18:52:54Z","message":"committed state"}
+{"level":"debug","height":9,"time":"2021-09-17T18:52:59Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:52:59Z","message":"No store migration needed"}
+{"level":"debug","height":9,"time":"2021-09-17T18:52:59Z","message":"End Block"}
+{"level":"info","module":"state","height":9,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:00Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B343420323238203233382034322031383720323220333220352031373920342032343820313420393320322037352032323420373420313733203235322032343120323032203131382031333420323534203231352034352031323420313034203534203936203230362033315D3A397D","time":"2021-09-17T18:53:00Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"2CE4EE2ABB162005B304F80E5D024BE04AADFCF1CA7686FED72D7C683660CE1F","height":9,"num_txs":0,"time":"2021-09-17T18:53:00Z","message":"committed state"}
+{"level":"debug","height":10,"time":"2021-09-17T18:53:06Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:06Z","message":"No store migration needed"}
+{"level":"debug","height":10,"time":"2021-09-17T18:53:06Z","message":"End Block"}
+{"level":"info","module":"state","height":10,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:06Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B32343620323139203131352032303920313332203233203139302031323320313432203832203136352032323220332033302032303220343420363520323335203230392031373020383520373820392038312034322031343820313831203730203939203233203136312034305D3A417D","time":"2021-09-17T18:53:06Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"F6DB73D18417BE7B8E52A5DE031ECA2C41EBD1AA554E09512A94B5466317A128","height":10,"num_txs":0,"time":"2021-09-17T18:53:06Z","message":"committed state"}
+{"level":"debug","height":11,"time":"2021-09-17T18:53:11Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:11Z","message":"No store migration needed"}
+{"level":"debug","height":11,"time":"2021-09-17T18:53:11Z","message":"End Block"}
+{"level":"info","module":"state","height":11,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:11Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B31393320353420313730203233332031323720393820313034203133203520313031203233322031353020313320353420313234203230352031303720313034203131302031343320323720313838203135352031333720323435203533203138362031352032323620313539203234382035365D3A427D","time":"2021-09-17T18:53:11Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"C136AAE97F62680D0565E8960D367CCD6B686E8F1BBC9B89F535BA0FE29FF838","height":11,"num_txs":0,"time":"2021-09-17T18:53:11Z","message":"committed state"}
+{"level":"debug","height":12,"time":"2021-09-17T18:53:17Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:17Z","message":"No store migration needed"}
+{"level":"debug","height":12,"time":"2021-09-17T18:53:17Z","message":"End Block"}
+{"level":"info","module":"state","height":12,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:18Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B323038203136372031303720393220323534203131372032343320313739203135352031373220313920302034392032353420323530203630203231392031313820313920323130203235203132372031383920323131203334203536203232372031323820313435203136342032372039355D3A437D","time":"2021-09-17T18:53:18Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"D0A76B5CFE75F3B39BAC130031FEFA3CDB7613D2197FBDD32238E38091A41B5F","height":12,"num_txs":0,"time":"2021-09-17T18:53:18Z","message":"committed state"}
+{"level":"debug","height":13,"time":"2021-09-17T18:53:23Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:23Z","message":"No store migration needed"}
+{"level":"debug","height":13,"time":"2021-09-17T18:53:23Z","message":"End Block"}
+{"level":"info","module":"state","height":13,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:23Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B3138362031383420333620323333203136372038382031303020313039203436203132392031393120313337203133312037302031353820313333203135382032323820323437203535203235342039372038362032203738203132302031313120313536203232203738203936203132315D3A447D","time":"2021-09-17T18:53:23Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"BAB824E9A758646D2E81BF8983469E859EE4F737FE6156024E786F9C164E6079","height":13,"num_txs":0,"time":"2021-09-17T18:53:23Z","message":"committed state"}
+{"level":"debug","height":14,"time":"2021-09-17T18:53:28Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:28Z","message":"No store migration needed"}
+{"level":"info","time":"2021-09-17T18:53:28Z","message":"Checking for node account rotation..."}
+{"level":"debug","height":14,"time":"2021-09-17T18:53:28Z","message":"End Block"}
+{"level":"info","module":"state","height":14,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:29Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B3137312035372031373820343120353920313339203231382031353820313820313338203134302035372033352032333420353020323220313839203130352035332031353520313038203132312031333020393920323234203132342031393820313030203134302031333920342032315D3A457D","time":"2021-09-17T18:53:29Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"AB39B2293B8BDA9E128A8C3923EA3216BD69359B6C798263E07CC6648C8B0415","height":14,"num_txs":0,"time":"2021-09-17T18:53:29Z","message":"committed state"}
+{"level":"debug","height":15,"time":"2021-09-17T18:53:33Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:33Z","message":"No store migration needed"}
+{"level":"debug","height":15,"time":"2021-09-17T18:53:33Z","message":"End Block"}
+{"level":"info","module":"state","height":15,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:34Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B313733203137342033382032343820313434203138312032343520323333203133382032333420362031323520313937203734203132342032313520313133203130352032323720313420313430203131392032353020323239203235312031343420363620313531203734203533203232332033345D3A467D","time":"2021-09-17T18:53:34Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"ADAE26F890B5F5E98AEA067DC54A7CD77169E30E8C77FAE5FB9042974A35DF22","height":15,"num_txs":0,"time":"2021-09-17T18:53:34Z","message":"committed state"}
+{"level":"debug","height":16,"time":"2021-09-17T18:53:40Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:40Z","message":"No store migration needed"}
+{"level":"debug","height":16,"time":"2021-09-17T18:53:40Z","message":"End Block"}
+{"level":"info","module":"state","height":16,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:40Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B32302037362032333720343120343220313733203131302032353020363320323233203138322031343220313438203133302031333020322032323420313237203234382037382031303220362039392032313920342031383120313530203136372033312031353520332035335D3A31307D","time":"2021-09-17T18:53:40Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"144CED292AAD6EFA3FDFB68E94828202E07FF84E660663DB04B596A71F9B0335","height":16,"num_txs":0,"time":"2021-09-17T18:53:40Z","message":"committed state"}
+{"level":"debug","height":17,"time":"2021-09-17T18:53:45Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:45Z","message":"No store migration needed"}
+{"level":"debug","height":17,"time":"2021-09-17T18:53:45Z","message":"End Block"}
+{"level":"info","module":"state","height":17,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:45Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B363620343920393420353420323133203131382031363720323138203139382036342039392031313220313839203333203231372031363520313435203230332032313420313136203731203232382031303120313520393420313531203134362032333620363020383120323035203233325D3A31317D","time":"2021-09-17T18:53:45Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"42315E36D576A7DAC6406370BD21D9A591CBD67447E4650F5E9792EC3C51CDE8","height":17,"num_txs":0,"time":"2021-09-17T18:53:45Z","message":"committed state"}
+{"level":"debug","height":18,"time":"2021-09-17T18:53:51Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:51Z","message":"No store migration needed"}
+{"level":"debug","height":18,"time":"2021-09-17T18:53:51Z","message":"End Block"}
+{"level":"info","module":"state","height":18,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:52Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B31363620393820353720313632203933203539203436203133372032313820323435203338203233392035312032343920313734203831203132382031363720313335203832203733203131312032333920313230203134392031313320323435203231392032343220323032203139302037305D3A31327D","time":"2021-09-17T18:53:52Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"A66239A25D3B2E89DAF526EF33F9AE5180A78752496FEF789571F5DBF2CABE46","height":18,"num_txs":0,"time":"2021-09-17T18:53:52Z","message":"committed state"}
+{"level":"debug","height":19,"time":"2021-09-17T18:53:57Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:53:57Z","message":"No store migration needed"}
+{"level":"debug","height":19,"time":"2021-09-17T18:53:57Z","message":"End Block"}
+{"level":"info","module":"state","height":19,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:53:57Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B313631203137342031393720313136203131362031323120393720313031203233322035352032333920313432203231312033203239203234302032313320352031323320313131203131382039352031393920342038203633203336203233302036302032203436203135335D3A31337D","time":"2021-09-17T18:53:57Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"A1AEC57474796165E837EF8ED3031DF0D5057B6F765FC704083F24E63C022E99","height":19,"num_txs":0,"time":"2021-09-17T18:53:57Z","message":"committed state"}
+{"level":"debug","height":20,"time":"2021-09-17T18:54:03Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:03Z","message":"No store migration needed"}
+{"level":"debug","height":20,"time":"2021-09-17T18:54:03Z","message":"End Block"}
+{"level":"info","module":"state","height":20,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:03Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B313532203739203433203131203137322031363820323131203131362031353120323230203136322031303720393820313534203735203233392032313220343220323337203230342031313820323534203136302035332033332031303220323031203136332031383420363520323032203138375D3A31347D","time":"2021-09-17T18:54:03Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"984F2B0BACA8D37497DCA26B629A4BEFD42AEDCC76FEA0352166C9A3B841CABB","height":20,"num_txs":0,"time":"2021-09-17T18:54:03Z","message":"committed state"}
+{"level":"debug","height":21,"time":"2021-09-17T18:54:08Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:08Z","message":"No store migration needed"}
+{"level":"debug","height":21,"time":"2021-09-17T18:54:08Z","message":"End Block"}
+{"level":"info","module":"state","height":21,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:09Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B313830203520383520313030203131322032323120313830203135392032313220313937203731203239203132392034203235302031323420323032203233362032343820323620323820313434203230342032342031393120313038203135203138322032303620383720382038385D3A31357D","time":"2021-09-17T18:54:09Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"B405556470DDB49FD4C5471D8104FA7CCAECF81A1C90CC18BF6C0FB6CE570858","height":21,"num_txs":0,"time":"2021-09-17T18:54:09Z","message":"committed state"}
+{"level":"debug","height":22,"time":"2021-09-17T18:54:15Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:15Z","message":"No store migration needed"}
+{"level":"info","time":"2021-09-17T18:54:15Z","message":"Checking for node account rotation... (retry)"}
+{"level":"debug","height":22,"time":"2021-09-17T18:54:15Z","message":"End Block"}
+{"level":"info","module":"state","height":22,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:15Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B353720313936203238203534203134203230362031333820323020313838203638203420383620313430203230322032303220333720313334203120323039203231203134372034302031323220393720323820323138203334203131203535203134372031313120365D3A31367D","time":"2021-09-17T18:54:15Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"39C41C360ECE8A14BC4404568CCACA258601D11593287A611CDA220B37936F06","height":22,"num_txs":0,"time":"2021-09-17T18:54:15Z","message":"committed state"}
+{"level":"debug","height":23,"time":"2021-09-17T18:54:20Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:20Z","message":"No store migration needed"}
+{"level":"debug","height":23,"time":"2021-09-17T18:54:20Z","message":"End Block"}
+{"level":"info","module":"state","height":23,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:21Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B31302037312031383020363920323530203230342038382032303520323320392037332034302032342031353920313338203932203138352032333220323139203638203832203237203236203232392031343220313136203231322032313520323237203233312035382033365D3A31377D","time":"2021-09-17T18:54:21Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"0A47B445FACC58CD17094928189F8A5CB9E8DB44521B1AE58E74D4D7E3E73A24","height":23,"num_txs":0,"time":"2021-09-17T18:54:21Z","message":"committed state"}
+{"level":"debug","height":24,"time":"2021-09-17T18:54:26Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:26Z","message":"No store migration needed"}
+{"level":"debug","height":24,"time":"2021-09-17T18:54:26Z","message":"End Block"}
+{"level":"info","module":"state","height":24,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:27Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B38352031383920313539203835203236203138302032353320373720313939203734203131203636203235322031323720323238203235302031383920323037203232372031373620323135203131203130302037392032303420313937203233203135302034352034342032203136375D3A31387D","time":"2021-09-17T18:54:27Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"55BD9F551AB4FD4DC74A0B42FC7FE4FABDCFE3B0D70B644FCCC517962D2C02A7","height":24,"num_txs":0,"time":"2021-09-17T18:54:27Z","message":"committed state"}
+{"level":"debug","height":25,"time":"2021-09-17T18:54:32Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:32Z","message":"No store migration needed"}
+{"level":"debug","height":25,"time":"2021-09-17T18:54:32Z","message":"End Block"}
+{"level":"info","module":"state","height":25,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:32Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B31323920383320313739203232382031343020313333203134332031323820323234203133203135372031353120333720313735203132312032353420313537203136332032313120313839203234352036203133372031323320313131203136203234342031393920313232203734203232312034355D3A31397D","time":"2021-09-17T18:54:32Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"8153B3E48C858F80E00D9D9725AF79FE9DA3D3BDF506897B6F10F4C77A4ADD2D","height":25,"num_txs":0,"time":"2021-09-17T18:54:32Z","message":"committed state"}
+{"level":"debug","height":26,"time":"2021-09-17T18:54:38Z","message":"Begin Block"}
+{"level":"debug","time":"2021-09-17T18:54:38Z","message":"No store migration needed"}
+{"level":"debug","height":26,"time":"2021-09-17T18:54:38Z","message":"End Block"}
+{"level":"info","module":"state","height":26,"num_invalid_txs":0,"num_valid_txs":0,"time":"2021-09-17T18:54:38Z","message":"executed block"}
+{"level":"info","commit":"436F6D6D697449447B5B31363920393320313833203232342037342038372032333720313338203137352036362031373720372031303820323035203137382032203137392031393920323039203133382031363720363920313635203233372032332033203235342031333920383320323338203233382034365D3A31417D","time":"2021-09-17T18:54:38Z","message":"commit synced"}
+{"level":"info","module":"state","app_hash":"A95DB7E04A57ED8AAF42B1076CCDB202B3C7D18AA745A5ED1703FE8B53EEEE2E","height":26,"num_txs":0,"time":"2021-09-17T18:54:38Z","message":"committed state"}

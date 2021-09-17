@@ -6,7 +6,18 @@ logDir="./logs/unofficial-$(date +%Y%m%d%H%M%S)"
 mkdir $logDir
 cd $logDir
 
-containers=("thornode1" "bifrost1" "thornode2" "dash1" "dash2" "dash3" "dash4" "bitcoin1" "binance1")
+containers=(
+  "thornode1"
+  "bifrost1"
+  "thornode2"
+  "bifrost2"
+  "dash1"
+  "dash2"
+  "dash3"
+  "dash4"
+  "bitcoincash1"
+  "bitcoincash2"
+)
 
 for container in ${containers[@]}; do
   echo "Writing $container.log..."
