@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -o pipefail
+
+. /docker/scripts/orchestrator.sh
 
 CHAIN_ID="${CHAIN_ID:=thorchain}"
 # Binance chain config

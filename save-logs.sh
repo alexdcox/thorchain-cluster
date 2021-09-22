@@ -25,13 +25,16 @@ for container in ${containers[@]}; do
 done
 
 echo "Copying /root/.thornode/config/config.toml..."
-docker exec thornode1 cat /root/.thornode/config/config.toml >& thornode-config.toml
+docker exec thornode1 cat /root/.thornode/config/config.toml >& thornode1-config.toml
 
 echo "Copying /root/.thornode/config/genesis.json..."
-docker exec thornode1 cat /root/.thornode/config/genesis.json >& thornode-genesis.json
+docker exec thornode1 cat /root/.thornode/config/genesis.json >& thornode1-genesis.json
 
-echo "Copying /etc/bifrost/config.json..."
-docker exec bifrost1 cat /etc/bifrost/config.json >& bifrost-config.json
+echo "Copying (bifrost1) /etc/bifrost/config.json..."
+docker exec bifrost1 cat /etc/bifrost/config.json >& bifrost1-config.json
+
+echo "Copying (bifrost2) /etc/bifrost/config.json..."
+docker exec bifrost2 cat /etc/bifrost/config.json >& bifrost2-config.json
 
 echo "Copying docker-compose.yaml..."
 cp $dir/docker/docker-compose.yaml .

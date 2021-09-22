@@ -1,5 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
+apk add socat
+
+. /docker/scripts/orchestrator.sh
 # . /docker/scripts/core.sh
 
 waitforblock() {
@@ -42,13 +45,10 @@ if [[ $(hostname) == "bitcoincash1" ]]; then
   echo "Adding node bitcoincash2"
   bitcoin-cli addnode bitcoincash2 add
 
-  while true
-  do
-    bitcoin-cli generatetoaddress 100 $MASTER_ADDR && break
-    sleep 5
-  done
+  bitcoin-cli generatetoaddress 100 $MASTER_ADDR && break
 
-  # mine a new block every BLOCK_TIME
+  orchestrator_send_ready
+
   while true
   do
     bitcoin-cli generatetoaddress 1 $MASTER_ADDR

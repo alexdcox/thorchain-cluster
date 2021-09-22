@@ -1,8 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+
+. /docker/scripts/orchestrator.sh
 
 set -o pipefail
 
 . "$(dirname "$0")/core.sh"
+. "$(dirname "$0")/orchestrator.sh"
 . "$(dirname "$0")/testnet-state.sh"
 
 SIGNER_NAME="${SIGNER_NAME:=thorchain}"
@@ -111,7 +114,7 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
 
   nodesReady=0
   vaultPubkeys=""
-  echo "Listening on port 5060 for startup requests, will continue when $NODES node(s) are ready..."
+  echo "Listening on port 5060 for startup requests, will continue when $NODES thornode(s) are ready..."
   while true; do
     if [[ $nodesReady -eq $NODES ]]; then
       echo "All nodes ready, starting genesis..."
@@ -212,9 +215,9 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
 
   external_address "$(determine_external_ip)" "$NET"
 
-  echo "Adding default pools"
-  cat ~/.thornode/config/genesis.json | jq ".app_state.thorchain.pools |= . + $(cat /docker/scripts/genesis-pool.json)" > /tmp/genesis.json
-  mv /tmp/genesis.json ~/.thornode/config/genesis.json
+#  echo "Adding default pools"
+#  cat ~/.thornode/config/genesis.json | jq ".app_state.thorchain.pools |= . + $(cat /docker/scripts/genesis-pool.json)" > /tmp/genesis.json
+#  mv /tmp/genesis.json ~/.thornode/config/genesis.json
 
   echo "Genesis content"
   cat ~/.thornode/config/genesis.json
@@ -230,8 +233,9 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
       sleep 1
     done
 
-    wait_for_block thornode1 1
+    wait_for_block thornode1 2
 
+    echo "Sending node bond transaction..."
     echo "$SIGNER_PASSWD" | thornode tx thorchain deposit 120000000 RUNE "bond:$nodeAddress" \
       --from "$SIGNER_NAME" \
       --keyring-backend=file \
@@ -268,7 +272,7 @@ VAULT_SIGNER_PASSWD="${SIGNER_PASSWD:=password}"
   )&
 
   printf "%s\n%s\n" "$SIGNER_NAME" "$SIGNER_PASSWD" | exec "$@"
-  echo "FUCKED"
+  echo "Something went badly wrong, genesis node has exited with code '$?'"
 ) &
 
 exit_on_sigterm

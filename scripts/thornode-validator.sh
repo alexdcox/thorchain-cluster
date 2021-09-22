@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -o pipefail
 
+. /docker/scripts/orchestrator.sh
 . "$(dirname "$0")/core.sh"
 
 SEEDS="${SEEDS:=none}"        # the hostname of multiple seeds set as tendermint seeds
@@ -162,6 +163,7 @@ BINANCE=${BINANCE:=$PEER:26660}
       sleep 1
     done
 
+    wait_for_next_block thornode2
     wait_for_next_block thornode2
 
     echo "Sending node deposit bond transaction..."

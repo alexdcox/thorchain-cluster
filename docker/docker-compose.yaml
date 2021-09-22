@@ -25,8 +25,10 @@ services:
       THORNODE_API_ENABLE: "true"
       NATIVE: none
       THOR_BLOCK_TIME: 5s
+      ORCHESTRATOR_HOST: dash1
+      ORCHESTRATOR_WAIT_FOR_HOST: bitcoincash1
     entrypoint:
-      /docker/scripts/genesis.sh
+      /docker/scripts/thornode-genesis.sh
     volumes:
       - ../scripts:/docker/scripts
       - thornode1:/root/.thornode
@@ -60,6 +62,8 @@ services:
       SIGNER_SEED_PHRASE: animal possible inch item nut daughter shoot gain lonely garlic pledge frown snow alter hurdle future beach love must walk north umbrella skin enough
       THOR_BLOCK_TIME: 5s
       BLOCK_SCANNER_BACKOFF: 5s
+      ORCHESTRATOR_HOST: dash1
+      ORCHESTRATOR_WAIT_FOR_HOST: bitcoincash1
     entrypoint:
       /docker/scripts/bifrost.sh
     volumes:
@@ -90,8 +94,10 @@ services:
       THORNODE_API_ENABLE: "true"
       NATIVE: none
       THOR_BLOCK_TIME: 5s
+      ORCHESTRATOR_HOST: dash1
+      ORCHESTRATOR_WAIT_FOR_HOST: bitcoincash1
     entrypoint:
-      /docker/scripts/validator.sh
+      /docker/scripts/thornode-validator.sh
     volumes:
       - ../scripts:/docker/scripts
       - thornode2:/root/.thornode
@@ -126,6 +132,8 @@ services:
       SIGNER_SEED_PHRASE: pair material jealous clip silly fly cry mule organ result topple conduct purchase marine library modify smart wood menu service such option reveal punch
       THOR_BLOCK_TIME: 5s
       BLOCK_SCANNER_BACKOFF: 5s
+      ORCHESTRATOR_HOST: dash1
+      ORCHESTRATOR_WAIT_FOR_HOST: bitcoincash1
     entrypoint:
       /docker/scripts/bifrost.sh
     volumes:
@@ -153,9 +161,13 @@ services:
     image: github.com/alexdcox/dash
     ports:
       - 19898:19898
+      - 5070:5070
     environment:
       BLOCK_TIME: 5
-    entrypoint: "/scripts/entrypoint-regtest-genesis.sh"
+      ORCHESTRATOR_HOST: dash1
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/dash-entrypoint-regtest-genesis.sh
     networks:
       thornode:
         ipv4_address: 172.32.62.1
@@ -165,7 +177,9 @@ services:
     hostname: dash2
     restart: unless-stopped
     image: github.com/alexdcox/dash
-    entrypoint: "/scripts/entrypoint-regtest-masternode.sh"
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/dash-entrypoint-regtest-masternode.sh
     networks:
       thornode:
         ipv4_address: 172.32.62.2
@@ -175,7 +189,9 @@ services:
     hostname: dash3
     restart: unless-stopped
     image: github.com/alexdcox/dash
-    entrypoint: "/scripts/entrypoint-regtest-masternode.sh"
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/dash-entrypoint-regtest-masternode.sh
     networks:
       thornode:
         ipv4_address: 172.32.62.3
@@ -185,7 +201,9 @@ services:
     hostname: dash4
     restart: unless-stopped
     image: github.com/alexdcox/dash
-    entrypoint: "/scripts/entrypoint-regtest-masternode.sh"
+    volumes:
+      - ../scripts:/docker/scripts
+    entrypoint: /docker/scripts/dash-entrypoint-regtest-masternode.sh
     networks:
       thornode:
         ipv4_address: 172.32.62.4
@@ -201,7 +219,7 @@ services:
 #    environment:
 #      RPC_PORT: "38443"
 #      BLOCK_TIME: 5
-#    entrypoint: "/scripts/entrypoint-mock.sh"
+#    entrypoint: /scripts/entrypoint-mock.sh
 #    networks:
 #      - thornode
 
@@ -217,9 +235,11 @@ services:
     environment:
       RPC_PORT: 28443
       BLOCK_TIME: 5
+      ORCHESTRATOR_HOST: dash1
+      ORCHESTRATOR_WAIT_FOR_HOST: dash1
     volumes:
       - ../scripts:/docker/scripts
-    entrypoint: "/docker/scripts/bitcoin-cash-entrypoint-mock.sh"
+    entrypoint: /docker/scripts/bitcoin-cash-entrypoint-mock.sh
     networks:
       - thornode
 
@@ -233,9 +253,11 @@ services:
     environment:
       RPC_PORT: 28443
       BLOCK_TIME: 5
+      ORCHESTRATOR_HOST: dash1
+      ORCHESTRATOR_WAIT_FOR_HOST: dash1
     volumes:
       - ../scripts:/docker/scripts
-    entrypoint: "/docker/scripts/bitcoin-cash-entrypoint-mock.sh"
+    entrypoint: /docker/scripts/bitcoin-cash-entrypoint-mock.sh
     networks:
       - thornode
 
@@ -251,6 +273,9 @@ services:
       MIDGARD_THORCHAIN_TENDERMINT_URL: http://thornode1:26657/websocket
       MIDGARD_TIMESCALE_HOST: midgard-db
       MIDGARD_THORCHAIN_LAST_CHAIN_BACKOFF: ${THOR_BLOCK_TIME:-5s}
+      # ORCHESTRATOR_HOST: dash1
+      # ORCHESTRATOR_WAIT_FOR_HOST: dash1
+    # entrypoint: /docker/scripts/midgard-entrypoint.sh
     ports:
       - 8080:8080
     logging:

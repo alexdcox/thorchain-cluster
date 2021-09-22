@@ -10,6 +10,9 @@ services:
     volumes:
       - ../scripts:/docker/scripts
     entrypoint: /docker/scripts/ready-poc-server.sh
+    environment:
+      - ORCHESTRATOR_HOST=orchestrator
+      - ORCHESTRATOR_WAIT_FOR_HOST=midgard
 
   dash:
     container_name: dash
@@ -21,8 +24,7 @@ services:
       - ../scripts:/docker/scripts
     entrypoint: /docker/scripts/ready-poc-client.sh
     environment:
-      - ORCHESTRATOR=orchestrator
-      - READY_AFTER=4
+      - ORCHESTRATOR_HOST=orchestrator
 
   bch:
     container_name: bch
@@ -34,9 +36,8 @@ services:
       - ../scripts:/docker/scripts
     entrypoint: /docker/scripts/ready-poc-client.sh
     environment:
-      - ORCHESTRATOR=orchestrator
-      - READY_AFTER=4
-      - TARGET=dash
+      - ORCHESTRATOR_HOST=orchestrator
+      - ORCHESTRATOR_WAIT_FOR_HOST=dash
 
   thorchain:
     container_name: thorchain
@@ -48,9 +49,8 @@ services:
       - ../scripts:/docker/scripts
     entrypoint: /docker/scripts/ready-poc-client.sh
     environment:
-      - ORCHESTRATOR=orchestrator
-      - READY_AFTER=4
-      - TARGET=bch
+      - ORCHESTRATOR_HOST=orchestrator
+      - ORCHESTRATOR_WAIT_FOR_HOST=bch
 
   midgard:
     container_name: midgard
@@ -62,9 +62,8 @@ services:
       - ../scripts:/docker/scripts
     entrypoint: /docker/scripts/ready-poc-client.sh
     environment:
-      - ORCHESTRATOR=orchestrator
-      - READY_AFTER=4
-      - TARGET=thorchain
+      - ORCHESTRATOR_HOST=orchestrator
+      - ORCHESTRATOR_WAIT_FOR_HOST=thorchain
 
 networks:
   poc:

@@ -3,12 +3,12 @@
     "balance_rune": "3757872062993",
     "balance_asset": "23539136827",
     "asset": "BCH.BCH",
-    "status": "Available"
+    "status": "Staged"
   },
   {
     "balance_rune": "1000000000000",
     "balance_asset": "33333333333",
     "asset": "DASH.DASH",
-    "status": "Available"
+    "status": "Staged"
   }
 ]
